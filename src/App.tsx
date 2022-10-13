@@ -11,8 +11,8 @@ const App: React.FC = () => {
   return (
     <div className="app-body">
       <Routes>
-        <Route path="/" element={<Home></Home>} />
-        <Route path="/progress" element={<Progress></Progress>} />
+        <Route path="/breath-react/" element={<Home></Home>} />
+        <Route path="/breath-react/progress" element={<Progress></Progress>} />
         <Route path="/auth" element={<Auth></Auth>} />
         <Route path="/reg" element={<Reg></Reg>} />
         <Route path="*" element={<NotFound></NotFound>} />
