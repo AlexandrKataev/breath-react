@@ -1,5 +1,7 @@
-.app-body {
-  background-color: #222129;
+.body {
+  background-color: #222129; // #222129
+  width: calc(50vw);
+  min-width: 350px;
   height: calc(100vh);
   display: flex;
   flex-direction: column;

@@ -1,0 +1,25 @@
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222129;
+  color: #cd82a5;
+  // border: salmon solid 1px;
+}
+
+.body img {
+  display: flex;
+  margin: 25px 20px;
+  color: #cd82a5;
+  width: 20px;
+}
+
+.inActive {
+  opacity: 0.3;
+}
+
+// .menu {
+//   display: flex;
+//   margin: 20px;
+//   // border: salmon solid 1px;
+// }

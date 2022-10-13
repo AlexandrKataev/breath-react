@@ -1,7 +1,8 @@
-.app-body {
-  background-color: #222129;
-  height: calc(100vh);
+.body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #cd82a5;
+  font-size: 30px;
+  font-weight: 100;
 }

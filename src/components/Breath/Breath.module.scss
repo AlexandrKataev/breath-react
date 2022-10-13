@@ -1,0 +1,13 @@
+.body {
+  display: flex;
+  grid-area: 'breath';
+  justify-content: center;
+  background-color: #222129;
+  color: #cd82a5;
+}
+
+.breath {
+  display: flex;
+  width: 60vh;
+  max-width: 90%;
+}
