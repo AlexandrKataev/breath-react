@@ -1,13 +1,10 @@
 .body {
   display: flex;
-  grid-area: 'breath';
-  justify-content: center;
-  background-color: #222129;
-  color: #cd82a5;
+  // background-color: var(--color-b2);
+  max-width: 80%;
 }
 
 .breath {
-  display: flex;
-  width: 60vh;
-  max-width: 80%;
+  width: 100%;
+  max-width: 47vh;
 }
