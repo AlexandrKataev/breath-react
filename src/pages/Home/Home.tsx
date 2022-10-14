@@ -3,6 +3,7 @@ import s from './Home.module.scss';
 import Breath from '../../components/Breath/Breath';
 import Button from '../../components/Button/StartButton';
 import Header from '../../components/Header/Header';
+import Bar from '../../components/Bar/Bar';
 
 const Home: React.FC = () => {
   return (
@@ -10,6 +11,7 @@ const Home: React.FC = () => {
       <Header></Header>
       <Breath></Breath>
       <Button></Button>
+      <Bar></Bar>
     </div>
   );
 };

@@ -1,0 +1,17 @@
+.body {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--color-b);
+  width: 33vh;
+  max-width: 50%;
+  height: 10vh;
+}
+
+.bar {
+  display: inline-flex;
+  border-radius: 50%;
+  background-color: var(--color-pr);
+  width: 7px;
+  height: 7px;
+}
