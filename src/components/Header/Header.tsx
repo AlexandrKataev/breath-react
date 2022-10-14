@@ -11,8 +11,10 @@ const Header: React.FC = () => {
   const location = useLocation();
   return (
     <div className={s.body}>
-      <Link to="/">
-        <img className={location.pathname === '/' ? '' : s.inActive} src={homeIcon}></img>
+      <Link to="/breath-react">
+        <img
+          className={location.pathname === '/breath-react' ? '' : s.inActive}
+          src={homeIcon}></img>
       </Link>
       <Link to="/progress">
         <img
