@@ -5,13 +5,22 @@
   background-color: var(--color-b);
   width: 33vh;
   max-width: 50%;
-  height: 10vh;
+  height: 11vh;
 }
 
 .bar {
   display: inline-flex;
   border-radius: 50%;
   background-color: var(--color-pr);
-  width: 7px;
-  height: 7px;
+  width: 1.5vh;
+  height: 1.5vh;
+}
+
+.bar_active {
+  display: inline-flex;
+  border-radius: 50%;
+  background-color: var(--color-pr);
+  width: 1.5vh;
+  height: 1.5vh;
+  opacity: 0.1;
 }

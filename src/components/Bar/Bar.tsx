@@ -11,9 +11,9 @@ const Bar: React.FC = () => {
       <div className={s.bar}></div>
       <div className={s.bar}></div>
       <div className={s.bar}></div>
-      <div className={s.bar}></div>
-      <div className={s.bar}></div>
-      <div className={s.bar}></div>
+      <div className={s.bar_active}></div>
+      <div className={s.bar_active}></div>
+      <div className={s.bar_active}></div>
     </div>
   );
 };
