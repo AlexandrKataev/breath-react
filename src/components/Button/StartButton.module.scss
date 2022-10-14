@@ -1,15 +1,18 @@
-.button {
+.start_button {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 22vh;
+  max-width: 40vw;
   height: 22vh;
+  max-height: 40vw;
   color: #cd82a5;
   border: 2px solid #f66c8a;
   border-radius: 50%;
   background-color: #222129;
 }
 
-.button_text {
-  font-size: 21px;
+.start_button_text {
+  font-size: 25px;
+  font-weight: 100;
 }
