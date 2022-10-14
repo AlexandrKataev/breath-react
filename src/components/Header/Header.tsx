@@ -18,7 +18,7 @@ const Header: React.FC = () => {
         className={({ isActive }) => (isActive ? undefined : s.inActive)}>
         <img src={homeIcon}></img>
       </NavLink>
-      <NavLink to="/progress" className={({ isActive }) => (isActive ? undefined : s.inActive)}>
+      <NavLink to="/reg" className={({ isActive }) => (isActive ? undefined : s.inActive)}>
         <img src={progressIcon}></img>
       </NavLink>
     </div>
