@@ -1,14 +1,14 @@
 import React from 'react';
 import s from './Reg.module.scss';
 
-import { useDispatch, useSelector } from 'react-redux';
 import { selectMail, selectUserName } from './regSlice/selectors';
 import { setPassword, setUserName } from './regSlice/regSlice';
+import { useAppDispatch, useAppSelector } from '../../shared/hooks';
 
 const Reg: React.FC = () => {
-  const userName = useSelector(selectUserName);
-  const mail = useSelector(selectMail);
-  const dispatch = useDispatch();
+  const userName = useAppSelector(selectUserName);
+  const mail = useAppSelector(selectMail);
+  const dispatch = useAppDispatch();
 
   const onChangeUserName = (event: React.ChangeEvent<HTMLInputElement>) => {
     dispatch(setUserName(event.target.value));
