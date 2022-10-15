@@ -1,4 +1,4 @@
-# [Breath App](https://alexandrkataev.github.io/breath-react/)
+Breath App - https://alexandrkataev.github.io/breath-react/)
 
 Приложение для дыхательной гимнастики.
 
