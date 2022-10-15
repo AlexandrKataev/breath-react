@@ -1,10 +1,12 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Breath - приложение для дыхательной гимнастики.
 
-## Available Scripts
+## Technology Stack
 
-In the project directory, you can run:
+- React
+- Redux Toolkit
+- TypeScript
 
 ### `npm start`
 

@@ -1,4 +1,4 @@
-import { RootState } from '../../../app/store/store';
+import { RootState } from '../../../shared/types';
 
 export const selectRegState = (state: RootState) => state.reg;
 export const selectUserName = (state: RootState) => state.reg.userName;

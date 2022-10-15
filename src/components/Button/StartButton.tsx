@@ -1,12 +1,13 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+
+import { useAppDispatch, useAppSelector } from '../../shared/hooks';
 import { start } from '../Breath/breathSlice/breathSlice';
 import { selectBreathStarted } from '../Breath/breathSlice/selectors';
 import s from './StartButton.module.scss';
 
 const StartButton: React.FC = () => {
-  const dispatch = useDispatch();
-  const started = useSelector(selectBreathStarted);
+  const dispatch = useAppDispatch();
+  const started = useAppSelector(selectBreathStarted);
   const onClickStart = () => {
     dispatch(start(!started));
   };
