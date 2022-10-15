@@ -15,7 +15,7 @@ const App: React.FC = () => {
         <Route path="/" element={<Home />} />
         <Route path="/breath-react/info" element={<Info />} />
         <Route path="/breath-react/progress" element={<Progress />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<Home />} />
       </Routes>
     </div>
   );
