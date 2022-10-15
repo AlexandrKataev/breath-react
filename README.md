@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# [Breath App](https://alexandrkataev.github.io/breath-react/)
 
-Breath - приложение для дыхательной гимнастики.
+Приложение для дыхательной гимнастики.
 
 ## Technology Stack
 
