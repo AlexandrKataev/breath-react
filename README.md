@@ -6,7 +6,10 @@ https://alexandrkataev.github.io/breath-react/
 ## Technology Stack
 
 - React
+- React Router
 - Redux Toolkit
 - TypeScript
-- SASS
+- CSS-Modules / SCSS
 - Axios
+
+## Structure
