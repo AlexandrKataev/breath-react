@@ -1,12 +1,12 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.scss';
-import Auth from './pages/Auth';
-import NotFound from './pages/NotFound';
-import Home from './pages/Home/Home';
-import Progress from './pages/Reg/Reg';
-import Reg from './pages/Reg/Reg';
-import Info from './pages/Info/Info';
+import Auth from '../pages/Auth';
+import NotFound from '../pages/NotFound';
+import Home from '../pages/Home/Home';
+import Progress from '../pages/Reg/Reg';
+import Reg from '../pages/Reg/Reg';
+import Info from '../pages/Info/Info';
 
 const App: React.FC = () => {
   return (

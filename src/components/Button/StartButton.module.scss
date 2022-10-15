@@ -10,9 +10,15 @@
   border: 2px solid #f66c8a;
   border-radius: 50%;
   background-color: #222129;
+  transition: 0.3s;
+  &:hover {
+    color: antiquewhite;
+    background-color: #f66c8a;
+  }
 }
 
 .start_button_text {
   font-size: 25px;
-  font-weight: 100;
+  font-weight: 400;
+  letter-spacing: 0.05em;
 }

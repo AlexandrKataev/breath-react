@@ -9,6 +9,9 @@
 
 h1 {
   margin: 60px 0px 0px 0px;
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
 }
 
 .button {
@@ -31,18 +34,22 @@ h1 {
 
 .input {
   margin: 20px 0px 0px 0px;
+  font-size: 15px;
   width: 300px;
   height: 40px;
   border: #cd82a5 solid 1px;
   border-radius: 20px;
   padding-left: 20px;
-  color: #cd82a536;
+  color: var(--color-pr);
   background-color: rgba(0, 255, 255, 0);
+  &::placeholder {
+    color: #cd82a536;
+  }
 }
 
 .description {
   margin: 20px 0px 0px 0px;
   font-size: 16px;
-  font-weight: normal;
-  opacity: 0.3;
+  font-weight: 100;
+  letter-spacing: 0.05em;
 }
