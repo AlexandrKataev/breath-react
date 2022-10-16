@@ -10,6 +10,7 @@ https://alexandrkataev.github.io/breath-react/
 - Redux Toolkit
 - TypeScript
 - CSS-Modules / SCSS
+- React Transition Group
 - Axios
 
 ## Structure

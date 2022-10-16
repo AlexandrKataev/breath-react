@@ -15,7 +15,7 @@ const Home: React.FC = () => {
       <Header></Header>
       <Breath></Breath>
       <Button />
-      {started ? <Bar></Bar> : ''}
+      {started && <Bar></Bar>}
     </div>
   );
 };
