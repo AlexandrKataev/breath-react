@@ -2,10 +2,11 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { breathState } from './types';
 
 const initialState: breathState = {
-  vdoh: 5,
-  zad: [10, 12, 14, 16, 20, 23, 39, 39, 39, 20, 29],
+  vdohTime: 10000,
+  zadTime: [3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000],
   started: false,
   isVdoh: false,
+  isZad: false,
   isVidoh: false,
   finished: 0,
   itter: 0,
@@ -25,14 +26,30 @@ export const breathSlice = createSlice({
     setDifficulty: (state, action: PayloadAction<boolean>) => {
       state.started = action.payload;
     },
-    setIsVdoh: (state, action: PayloadAction<boolean>) => {
-      state.isVdoh = action.payload;
+    setIsVdoh: (state) => {
+      state.isVdoh = true;
+      state.isZad = false;
+      state.isVidoh = false;
+      state.hint = 'Вдох';
     },
-    setIsVidoh: (state, action: PayloadAction<boolean>) => {
-      state.isVidoh = action.payload;
+    setIsZad: (state) => {
+      state.isVdoh = false;
+      state.isZad = true;
+      state.isVidoh = false;
+      state.hint = 'Задержка';
+    },
+    setIsVidoh: (state) => {
+      state.isVidoh = true;
+      state.isZad = false;
+      state.isVdoh = false;
+      state.hint = 'Выдох';
+    },
+    nextItter: (state) => {
+      state.itter++;
     },
   },
 });
 
-export const { start, stop, setDifficulty, setIsVdoh, setIsVidoh } = breathSlice.actions;
+export const { start, stop, setDifficulty, setIsVdoh, setIsZad, setIsVidoh, nextItter } =
+  breathSlice.actions;
 export default breathSlice.reducer;

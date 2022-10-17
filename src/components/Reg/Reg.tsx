@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import s from './Reg.module.scss';
 
 import { selectMail, selectUserName } from './regSlice/selectors';
