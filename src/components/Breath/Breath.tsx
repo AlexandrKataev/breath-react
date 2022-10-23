@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import cx from 'classnames';
 
 import s from './Breath.module.scss';
@@ -12,8 +12,19 @@ import {
   selectBreathStarted,
   selectBreathVdohTime,
   selectBreathZadTime,
+  selectTime,
 } from './breathSlice/selectors';
-import { nextItter, setIsVdoh, setIsVidoh, setIsZad, start } from './breathSlice/breathSlice';
+import {
+  nextItter,
+  setIsVdoh,
+  setIsVidoh,
+  setIsZad,
+  start,
+  setTime,
+  timeMinus,
+  resetItter,
+  stop,
+} from './breathSlice/breathSlice';
 
 const Breath: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -26,45 +37,79 @@ const Breath: React.FC = () => {
   const isVidoh = useAppSelector(selectBreathIsVidoh);
   const isZad = useAppSelector(selectBreathIsZad);
   const itter = useAppSelector(selectBreathItter);
+  const time = useAppSelector(selectTime);
+  // const [timer, setTimer] = useState(0);
 
   useEffect(() => {
-    let timer: ReturnType<typeof setTimeout> | undefined = undefined;
-    clearTimeout(timer);
-    // console.log('render');
-    if (started) {
-      clearTimeout(timer);
-      dispatch(setIsVdoh());
-      console.log('vdoh', vdohTime);
-      // @ts-ignore
-      document.querySelector(':root').style.setProperty('--animTime', vdohTime / 1000 + 's');
+    const timer = setInterval(() => {
+      dispatch(timeMinus());
+      console.log(time);
+    }, 1000);
 
-      timer = setTimeout(() => {
+    if (!started) {
+      clearInterval(timer);
+      dispatch(resetItter());
+    } else if (started) {
+      if (isVdoh && itter < 10 && !time) {
         dispatch(setIsZad());
-        console.log('zad', zadTime[itter]);
-      }, vdohTime);
-
-      timer = setTimeout(() => {
+        dispatch(setTime(zadTime[itter]));
+      } else if (isZad && itter < 10 && !time) {
         dispatch(setIsVidoh());
-        console.log('vidoh', vdohTime);
-      }, vdohTime + zadTime[itter]);
-
-      timer = setTimeout(() => {
+        dispatch(setTime(vdohTime));
+      } else if (isVidoh && itter < 10 && !time) {
+        dispatch(setIsVdoh());
+        dispatch(setTime(vdohTime));
         dispatch(nextItter());
-      }, vdohTime * 2 + zadTime[itter]);
-    } else {
-      clearTimeout(timer);
+      } else if (isVdoh && itter === 10) {
+        dispatch(start(false));
+        clearInterval(timer);
+        dispatch(resetItter());
+      }
     }
-    return () => {
-      clearTimeout(timer);
-      console.log('stop');
-    };
-  }, [started, itter]);
 
-  useEffect((): any => {
+    return () => {
+      clearInterval(timer);
+    };
+  }, [started, time]);
+
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     setSeconds(seconds + 1);
+  //     console.log(seconds);
+  //   }, 1000);
+
+  //   // console.log('render');
+  //   if (started) {
+  //     // clearTimeout(timer);
+  //     // dispatch(setIsVdoh());
+  //     // console.log('vdoh', vdohTime);
+  //     // // @ts-ignore
+  //     // document.querySelector(':root').style.setProperty('--animTime', vdohTime / 1000 + 's');
+  //     // timer = setTimeout(() => {
+  //     //   dispatch(setIsZad());
+  //     //   console.log('zad', zadTime[itter]);
+  //     // }, vdohTime);
+  //     // timer = setTimeout(() => {
+  //     //   dispatch(setIsVidoh());
+  //     //   console.log('vidoh', vdohTime);
+  //     // }, vdohTime + zadTime[itter]);
+  //     // timer = setTimeout(() => {
+  //     //   dispatch(nextItter());
+  //     // }, vdohTime * 2 + zadTime[itter]);
+  //   } else {
+  //     clearInterval(timer);
+  //   }
+  //   return () => {
+  //     clearInterval(timer);
+  //     console.log('stop');
+  //   };
+  // }, [started, itter]);
+
+  useEffect(() => {
     // @ts-ignore
-    document.querySelector(':root').style.setProperty('--animTime', vdohTime / 1000 + 's');
-    // @ts-ignore
-    console.log(getComputedStyle(document.querySelector(':root')).getPropertyValue('--animTime'));
+    document.querySelector(':root')?.style.setProperty('--animTime', vdohTime + 's');
+
+    // console.log(getComputedStyle(document.querySelector(':root')).getPropertyValue('--animTime'));
     return () => {
       dispatch(start(false));
     };

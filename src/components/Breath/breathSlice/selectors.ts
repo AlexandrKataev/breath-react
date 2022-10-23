@@ -11,3 +11,4 @@ export const selectBreathHint = (state: RootState) => state.breath.hint;
 export const selectBreathZadTime = (state: RootState) => state.breath.zadTime;
 export const selectBreathVdohTime = (state: RootState) => state.breath.vdohTime;
 export const selectBreathItter = (state: RootState) => state.breath.itter;
+export const selectTime = (state: RootState) => state.breath.time;

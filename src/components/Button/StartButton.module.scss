@@ -17,8 +17,32 @@
   }
 }
 
+.start_button_started {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22vh;
+  max-width: 40vw;
+  height: 22vh;
+  max-height: 40vw;
+  color: #da91b3;
+  border: 2px solid #f7829b;
+  border-radius: 50%;
+  background-color: #222129;
+  transition: 0.3s;
+  &:hover {
+    border-color: #e9a7c6;
+    color: #e9a7c6;
+  }
+}
+
 .start_button_text {
   font-size: 25px;
   font-weight: 400;
+  letter-spacing: 0.05em;
+}
+.start_button_text_started {
+  font-size: 60px;
+  font-weight: 100;
   letter-spacing: 0.05em;
 }

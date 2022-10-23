@@ -1,4 +1,5 @@
 export interface breathState {
+  time: number;
   vdohTime: number;
   zadTime: number[];
   started: boolean;
