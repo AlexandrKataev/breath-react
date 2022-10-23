@@ -9,18 +9,6 @@ const Bar: React.FC = () => {
   return (
     <>
       <div className={s.hint}>{hint}</div>
-      <div className={s.body}>
-        <div className={s.bar}></div>
-        <div className={s.bar}></div>
-        <div className={s.bar}></div>
-        <div className={s.bar}></div>
-        <div className={s.bar}></div>
-        <div className={s.bar}></div>
-        <div className={s.bar}></div>
-        <div className={s.bar_active}></div>
-        <div className={s.bar_active}></div>
-        <div className={s.bar_active}></div>
-      </div>
     </>
   );
 };

@@ -3,7 +3,7 @@ import { breathState } from './types';
 
 const initialState: breathState = {
   time: 0,
-  vdohTime: 5,
+  vdohTime: 7,
   zadTime: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
   started: false,
   isVdoh: false,
