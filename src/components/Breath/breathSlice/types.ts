@@ -9,4 +9,5 @@ export interface breathState {
   finished: number;
   itter: number;
   hint: 'Вдох' | 'Задержка' | 'Выдох' | 'Приготовьтесь...';
+  difficulty: number;
 }

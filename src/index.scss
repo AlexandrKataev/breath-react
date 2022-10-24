@@ -98,3 +98,18 @@ h6 {
   font-size: inherit;
   font-weight: 400;
 }
+
+/********** Range Input Styles **********/
+/*Range Reset*/
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 15rem;
+}
+
+/* Removes default focus */
+input[type='range']:focus {
+  outline: none;
+}

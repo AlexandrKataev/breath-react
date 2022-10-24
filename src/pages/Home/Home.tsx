@@ -18,6 +18,7 @@ import {
   CircularProgressbarWithChildren,
 } from 'react-circular-progressbar';
 import { useAppDispatch, useAppSelector } from '../../shared/hooks';
+import Hint from '../../components/Hint/Hint';
 
 const Home: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -56,7 +57,7 @@ const Home: React.FC = () => {
         </div>
       )}
 
-      {started && <Bar></Bar>}
+      {started ? <Hint /> : <Bar />}
     </div>
   );
 };

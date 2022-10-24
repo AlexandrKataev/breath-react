@@ -7,6 +7,7 @@ export const selectBreathIsZad = (state: RootState) => state.breath.isZad;
 export const selectBreathIsVidoh = (state: RootState) => state.breath.isVidoh;
 
 export const selectBreathHint = (state: RootState) => state.breath.hint;
+export const selectBreathDifficulty = (state: RootState) => state.breath.difficulty;
 
 export const selectBreathZadTime = (state: RootState) => state.breath.zadTime;
 export const selectBreathVdohTime = (state: RootState) => state.breath.vdohTime;

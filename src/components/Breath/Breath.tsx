@@ -72,39 +72,6 @@ const Breath: React.FC = () => {
     };
   }, [started, time]);
 
-  // useEffect(() => {
-  //   const timer = setInterval(() => {
-  //     setSeconds(seconds + 1);
-  //     console.log(seconds);
-  //   }, 1000);
-
-  //   // console.log('render');
-  //   if (started) {
-  //     // clearTimeout(timer);
-  //     // dispatch(setIsVdoh());
-  //     // console.log('vdoh', vdohTime);
-  //     // // @ts-ignore
-  //     // document.querySelector(':root').style.setProperty('--animTime', vdohTime / 1000 + 's');
-  //     // timer = setTimeout(() => {
-  //     //   dispatch(setIsZad());
-  //     //   console.log('zad', zadTime[itter]);
-  //     // }, vdohTime);
-  //     // timer = setTimeout(() => {
-  //     //   dispatch(setIsVidoh());
-  //     //   console.log('vidoh', vdohTime);
-  //     // }, vdohTime + zadTime[itter]);
-  //     // timer = setTimeout(() => {
-  //     //   dispatch(nextItter());
-  //     // }, vdohTime * 2 + zadTime[itter]);
-  //   } else {
-  //     clearInterval(timer);
-  //   }
-  //   return () => {
-  //     clearInterval(timer);
-  //     console.log('stop');
-  //   };
-  // }, [started, itter]);
-
   useEffect(() => {
     // @ts-ignore
     document.querySelector(':root')?.style.setProperty('--animTime', vdohTime + 's');

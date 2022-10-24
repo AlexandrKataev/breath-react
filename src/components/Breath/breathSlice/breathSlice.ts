@@ -3,8 +3,8 @@ import { breathState } from './types';
 
 const initialState: breathState = {
   time: 0,
-  vdohTime: 7,
-  zadTime: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+  vdohTime: 10,
+  zadTime: [10, 12, 14, 16, 20, 23, 39, 39, 39, 20, 29],
   started: false,
   isVdoh: false,
   isZad: false,
@@ -12,6 +12,7 @@ const initialState: breathState = {
   finished: 0,
   itter: 0,
   hint: 'Вдох',
+  difficulty: 5,
 };
 
 export const breathSlice = createSlice({
@@ -29,9 +30,26 @@ export const breathSlice = createSlice({
     stop: (state) => {
       state.started = false;
     },
-    setDifficulty: (state, action: PayloadAction<boolean>) => {
-      state.started = action.payload;
+    setTimings: (state) => {
+      state.vdohTime = state.difficulty + 5;
+      state.zadTime[0] = state.difficulty + 5;
+      state.zadTime[9] = state.zadTime[0] * 2;
+      state.zadTime[4] = Math.floor((state.zadTime[9] + state.zadTime[0]) / 2 - 1);
+      state.zadTime[5] = Math.floor((state.zadTime[9] + state.zadTime[0]) / 2);
+      state.zadTime[2] = Math.ceil((state.zadTime[0] + state.zadTime[4]) / 2);
+      state.zadTime[1] = Math.floor((state.zadTime[0] + state.zadTime[2]) / 2);
+      state.zadTime[3] = Math.floor((state.zadTime[2] + state.zadTime[4]) / 2);
+      state.zadTime[7] = Math.floor((state.zadTime[5] + state.zadTime[9]) / 2);
+      state.zadTime[6] = Math.floor((state.zadTime[5] + state.zadTime[7]) / 2);
+      state.zadTime[8] = Math.floor((state.zadTime[7] + state.zadTime[9]) / 2);
     },
+    minusDifficulty: (state) => {
+      state.difficulty--;
+    },
+    plusDifficulty: (state) => {
+      state.difficulty++;
+    },
+
     setIsVdoh: (state) => {
       state.isVdoh = true;
       state.isZad = false;
@@ -49,6 +67,9 @@ export const breathSlice = createSlice({
       state.isZad = false;
       state.isVdoh = false;
       state.hint = 'Выдох';
+    },
+    setReady: (state) => {
+      state.hint = 'Приготовьтесь...';
     },
     resetItter: (state) => {
       state.itter = 0;
@@ -68,7 +89,10 @@ export const breathSlice = createSlice({
 export const {
   start,
   stop,
-  setDifficulty,
+  setTimings,
+  setReady,
+  minusDifficulty,
+  plusDifficulty,
   setIsVdoh,
   setIsZad,
   setIsVidoh,

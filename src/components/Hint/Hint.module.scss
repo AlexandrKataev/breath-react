@@ -1,0 +1,33 @@
+.hint {
+  margin: 20px 0px 0px 0px;
+  font-size: 25px;
+  font-weight: 400;
+  color: var(--color-pr);
+}
+
+.body {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--color-b);
+  width: 33vh;
+  max-width: 65%;
+  height: 11vh;
+}
+
+.bar {
+  display: inline-flex;
+  border-radius: 50%;
+  background-color: var(--color-pr);
+  width: 1.5vh;
+  height: 1.5vh;
+}
+
+.bar_active {
+  display: inline-flex;
+  border-radius: 50%;
+  background-color: var(--color-pr);
+  width: 1.2vh;
+  height: 1.2vh;
+  opacity: 0.1;
+}
