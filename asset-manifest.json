@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/breath-react/static/css/main.555b8c47.css",
-    "main.js": "/breath-react/static/js/main.1a858a30.js",
+    "main.css": "/breath-react/static/css/main.49ec5488.css",
+    "main.js": "/breath-react/static/js/main.561c3ffb.js",
     "static/media/info.png": "/breath-react/static/media/info.990473abb550b29254c9.png",
     "static/media/breath.svg": "/breath-react/static/media/breath.d1610f51e8523a77dd1f.svg",
     "index.html": "/breath-react/index.html",
-    "main.555b8c47.css.map": "/breath-react/static/css/main.555b8c47.css.map",
-    "main.1a858a30.js.map": "/breath-react/static/js/main.1a858a30.js.map"
+    "main.49ec5488.css.map": "/breath-react/static/css/main.49ec5488.css.map",
+    "main.561c3ffb.js.map": "/breath-react/static/js/main.561c3ffb.js.map"
   },
   "entrypoints": [
-    "static/css/main.555b8c47.css",
-    "static/js/main.1a858a30.js"
+    "static/css/main.49ec5488.css",
+    "static/js/main.561c3ffb.js"
   ]
 }
