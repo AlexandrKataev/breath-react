@@ -1,4 +1,4 @@
-import React, { FormEventHandler, useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../../shared/hooks';
 import { selectBreathDifficulty } from '../Breath/breathSlice/selectors';
 
