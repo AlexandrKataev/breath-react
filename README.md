@@ -1,6 +1,6 @@
 # Breath App
 
-Приложение для дыхательной гимнастики
+An app to improve your breathing
 https://alexandrkataev.github.io/breath-react/
 
 ## Technology Stack
