@@ -5,14 +5,23 @@ https://alexandrkataev.github.io/breath-react/
 
 ## Technology Stack
 
+#### Front-end
+
 - React
 - React Router
 - Redux Toolkit
 - TypeScript
 - CSS-Modules / SCSS
-- React Transition Group
 - Axios
+
+#### Back-end
+
+- Express
+- MongoDB
+- JWT
+- Bcrypt
 
 ## Structure
 
-![Структура не найдена](./public/breath-structure.drawio.png 'Структура API')
+###Front-end
+![Структура не найдена](./public/breath-structure.drawio.png 'Front-end structure')
