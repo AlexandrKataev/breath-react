@@ -1,0 +1,32 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bar_container {
+  width: 60px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 10px;
+  justify-items: center;
+}
+
+.item,
+.item_active {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+
+  background-color: rgb(218, 99, 158);
+}
+
+.item {
+  opacity: 0.1;
+}
+
+.difficulty {
+  font-size: 20px;
+  color: antiquewhite;
+}

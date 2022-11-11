@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import s from './Reg.module.scss';
 
 import { selectMail, selectUserName } from './regSlice/selectors';
@@ -6,6 +6,7 @@ import { setPassword, setUserName } from './regSlice/regSlice';
 import { useAppDispatch, useAppSelector } from '../../shared/hooks';
 
 const Reg: React.FC = () => {
+  const [isRegister, setIsRegister] = useState(false);
   const userName = useAppSelector(selectUserName);
   const mail = useAppSelector(selectMail);
   const dispatch = useAppDispatch();
@@ -20,7 +21,15 @@ const Reg: React.FC = () => {
 
   return (
     <div className={s.body}>
-      <h1>Registration</h1>
+      <div className={s.reg_choose}>
+        <div className={!isRegister ? s.reg_active : s.reg} onClick={() => setIsRegister(false)}>
+          Login
+        </div>
+        <div className={isRegister ? s.reg_active : s.reg} onClick={() => setIsRegister(true)}>
+          Register
+        </div>
+      </div>
+
       <input
         value={userName}
         onChange={onChangeUserName}
@@ -35,7 +44,7 @@ const Reg: React.FC = () => {
         className={s.input}
         placeholder="Password"
       />
-      <button className={s.button}>Register</button>
+      <button className={s.button}>{isRegister ? 'Register' : 'Login'}</button>
       <div className={s.description}>Register, to use more functional</div>
     </div>
   );

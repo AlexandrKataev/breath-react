@@ -2,9 +2,9 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import s from './Header.module.scss';
 
-import homeIcon from '../../assets/images/home.png';
-import infoIcon from '../../assets/images/info.png';
-import progressIcon from '../../assets/images/progress.png';
+import homeIcon from 'assets/images/home.png';
+import infoIcon from 'assets/images/info.png';
+import progressIcon from 'assets/images/progress.png';
 
 const Header: React.FC = () => {
   return (
