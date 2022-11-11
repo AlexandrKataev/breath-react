@@ -8,9 +8,9 @@ https://alexandrkataev.github.io/breath-react/
 #### Front-end
 
 - React
-- React Router
 - Redux Toolkit
 - TypeScript
+- React Router
 - CSS-Modules / SCSS
 - Axios
 
