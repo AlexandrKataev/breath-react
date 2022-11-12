@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useAppDispatch, useAppSelector } from '../../../shared/hooks';
+import { useAppDispatch, useAppSelector } from '../../../shared/hooks/redux-hooks';
 
 import {
   selectBreathIsVdoh,

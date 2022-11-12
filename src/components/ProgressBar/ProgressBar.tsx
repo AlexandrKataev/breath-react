@@ -1,6 +1,6 @@
 import { selectBreathDifficulty } from 'components/Breath/breathSlice/selectors';
 import React, { useEffect } from 'react';
-import { useAppSelector } from 'shared/hooks';
+import { useAppSelector } from 'shared/hooks/redux-hooks';
 import { arrayBuffer } from 'stream/consumers';
 import s from './ProgressBar.module.scss';
 

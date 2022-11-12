@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-import { useAppDispatch, useAppSelector } from '../../shared/hooks';
+import { useAppDispatch, useAppSelector } from '../../shared/hooks/redux-hooks';
 import { start } from '../Breath/breathSlice/breathSlice';
 import { selectBreathStarted, selectTime } from '../Breath/breathSlice/selectors';
 import s from './StartButton.module.scss';

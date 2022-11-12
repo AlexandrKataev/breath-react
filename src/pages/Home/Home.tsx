@@ -1,24 +1,18 @@
 import React from 'react';
 import 'react-circular-progressbar/dist/styles.css';
 import s from './Home.module.scss';
-import { start } from '../../components/Breath/breathSlice/breathSlice';
-import Breath from '../../components/Breath/Breath';
-import Button from '../../components/Button/StartButton';
-import Header from '../../components/Header/Header';
-import Bar from '../../components/Bar/Bar';
-import { useSelector } from 'react-redux';
+import { start } from 'components/Breath/breathSlice/breathSlice';
+import Breath from 'components/Breath/Breath';
+import Button from 'components/Button/StartButton';
+import Bar from 'components/Bar/Bar';
 import {
   selectBreathItter,
   selectBreathStarted,
   selectTime,
-} from '../../components/Breath/breathSlice/selectors';
-import {
-  buildStyles,
-  CircularProgressbar,
-  CircularProgressbarWithChildren,
-} from 'react-circular-progressbar';
-import { useAppDispatch, useAppSelector } from '../../shared/hooks';
-import Hint from '../../components/Hint/Hint';
+} from 'components/Breath/breathSlice/selectors';
+import { buildStyles, CircularProgressbarWithChildren } from 'react-circular-progressbar';
+import { useAppDispatch, useAppSelector } from 'shared/hooks/redux-hooks';
+import Hint from 'components/Hint/Hint';
 
 const Home: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -33,7 +27,6 @@ const Home: React.FC = () => {
 
   return (
     <div className={s.body}>
-      <Header></Header>
       <Breath></Breath>
       {!started && <Button />}
       {started && (

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useAppDispatch, useAppSelector } from '../../shared/hooks';
+import { useAppDispatch, useAppSelector } from '../../shared/hooks/redux-hooks';
 import { selectBreathDifficulty } from '../Breath/breathSlice/selectors';
 
 import minus from '../../assets/images/minus.png';

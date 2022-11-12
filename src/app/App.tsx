@@ -1,23 +1,14 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
-import './App.scss';
 
-import NotFound from 'pages/NotFound';
-import Home from 'pages/Home/Home';
-import Progress from 'pages/Progress/Progress';
-import Info from 'pages/Info/Info';
-import ProgressPage from 'pages/Progress/Progress';
+import './App.scss';
+import Routing from 'pages';
+import Header from 'widgets/Header/Header';
 
 const App: React.FC = () => {
   return (
     <div className="app-body">
-      <Routes>
-        <Route path="/breath-react/home" element={<Home />} />
-        <Route path="/" element={<Home />} />
-        <Route path="/breath-react/info" element={<Info />} />
-        <Route path="/breath-react/progress" element={<ProgressPage />} />
-        <Route path="*" element={<Home />} />
-      </Routes>
+      <Header />
+      <Routing />
     </div>
   );
 };

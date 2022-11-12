@@ -1,13 +1,15 @@
 import React from 'react';
 import s from './Info.module.scss';
 
-import Header from '../../components/Header/Header';
+import { useAppDispatch } from 'shared/hooks/redux-hooks';
+import { exitAuth } from 'processes/Auth/authSlice';
 
 const Info: React.FC = () => {
+  const dispatch = useAppDispatch();
   return (
     <div>
-      <Header />
       <div className={s.body}>Info</div>
+      <button onClick={() => dispatch(exitAuth())}>Выйти</button>
     </div>
   );
 };
