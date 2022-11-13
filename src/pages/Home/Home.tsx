@@ -6,6 +6,7 @@ import Breath from 'components/Breath/Breath';
 import Button from 'components/Button/StartButton';
 import Bar from 'components/Bar/Bar';
 import {
+  selectBreathDifficulty,
   selectBreathItter,
   selectBreathStarted,
   selectTime,

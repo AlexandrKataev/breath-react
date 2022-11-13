@@ -1,15 +1,14 @@
-import { selectAuth } from 'processes/Auth/selectors';
 import { Navigate, Route, Routes } from 'react-router-dom';
-import { useAppSelector } from 'shared/hooks/redux-hooks';
-import Auth from './Auth/Auth';
+import { useAuth } from 'shared/hooks/use-auth';
 
+import Auth from './Auth/Auth';
 import Home from './Home/Home';
 import Info from './Info/Info';
 import ProgressPage from './Progress/Progress';
 
 const Routing = () => {
-  const auth = useAppSelector(selectAuth);
-  return auth ? (
+  const { isAuth } = useAuth();
+  return isAuth ? (
     <Routes>
       <Route path="/breath-react/home" element={<Home />} />
       <Route path="/breath-react/info" element={<Info />} />

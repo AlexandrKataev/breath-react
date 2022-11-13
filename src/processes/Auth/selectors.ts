@@ -1,3 +1,3 @@
 import { RootState } from 'shared/types';
 
-export const selectAuth = (state: RootState) => state.auth.email;
+export const selectAuth = (state: RootState) => state.auth;

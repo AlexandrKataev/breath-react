@@ -49,7 +49,9 @@ export const breathSlice = createSlice({
     plusDifficulty: (state) => {
       state.difficulty++;
     },
-
+    setDifficulty: (state, action) => {
+      state.difficulty = action.payload;
+    },
     setIsVdoh: (state) => {
       state.isVdoh = true;
       state.isZad = false;
@@ -93,6 +95,7 @@ export const {
   setReady,
   minusDifficulty,
   plusDifficulty,
+  setDifficulty,
   setIsVdoh,
   setIsZad,
   setIsVidoh,
