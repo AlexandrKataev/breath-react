@@ -1,14 +1,13 @@
 import React from 'react';
-import s from './Progress.module.scss';
-
-import Header from 'widgets/Header/Header';
 
 import ProgressBar from 'components/ProgressBar/ProgressBar';
+import Difficulty from 'features/Difficulty/Difficulty';
 
 const ProgressPage: React.FC = () => {
   return (
     <div>
       <ProgressBar />
+      <Difficulty />
     </div>
   );
 };

@@ -5,6 +5,7 @@ import { useAppDispatch } from 'shared/hooks/redux-hooks';
 import { setAuth } from 'processes/Auth/authSlice';
 
 import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
+import Button from 'shared/ui/Button/Button';
 
 const Auth: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -62,12 +63,10 @@ const Auth: React.FC = () => {
   return (
     <div className={s.body}>
       <div className={s.reg_choose}>
-        <div className={s.reg_active}>Login with Google</div>
+        <div className={s.reg_active}>{'Войти с Google'}</div>
       </div>
-      <button className={s.button} onClick={handleLogin}>
-        {'Login'}
-      </button>
-      <div className={s.description}>Register, to use more functional</div>
+      <Button text={'Войти'} function={handleLogin} />
+      <div className={s.description}>{'Авторизуйся и прокачай своё дыхание.'}</div>
     </div>
   );
 };

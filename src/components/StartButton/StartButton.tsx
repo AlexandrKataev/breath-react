@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+
+import s from './StartButton.module.scss';
 
 import { useAppDispatch, useAppSelector } from '../../shared/hooks/redux-hooks';
 import { start } from '../Breath/breathSlice/breathSlice';
 import { selectBreathStarted, selectTime } from '../Breath/breathSlice/selectors';
-import s from './StartButton.module.scss';
 
 const StartButton: React.FC = () => {
   const dispatch = useAppDispatch();

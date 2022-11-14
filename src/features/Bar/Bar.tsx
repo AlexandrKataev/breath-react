@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../../shared/hooks/redux-hooks';
-import { selectBreathDifficulty } from '../Breath/breathSlice/selectors';
+import { selectBreathDifficulty } from 'components/Breath/breathSlice/selectors';
 
-import minus from '../../assets/images/minus.png';
-import plus from '../../assets/images/plus.png';
+import minus from 'assets/images/minus.png';
+import plus from 'assets/images/plus.png';
 
 import s from './Bar.module.scss';
 import {
@@ -11,7 +11,7 @@ import {
   plusDifficulty,
   setDifficulty,
   setTimings,
-} from '../Breath/breathSlice/breathSlice';
+} from 'components/Breath/breathSlice/breathSlice';
 
 const Bar: React.FC = () => {
   const dispatch = useAppDispatch();

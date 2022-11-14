@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './App.scss';
-import Routing from 'pages';
+import Routing from 'pages/Routing';
 import Header from 'widgets/Header/Header';
 
 const App: React.FC = () => {

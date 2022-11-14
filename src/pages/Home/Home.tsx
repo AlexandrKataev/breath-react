@@ -3,8 +3,7 @@ import 'react-circular-progressbar/dist/styles.css';
 import s from './Home.module.scss';
 import { start } from 'components/Breath/breathSlice/breathSlice';
 import Breath from 'components/Breath/Breath';
-import Button from 'components/Button/StartButton';
-import Bar from 'components/Bar/Bar';
+import Button from 'components/StartButton/StartButton';
 import {
   selectBreathDifficulty,
   selectBreathItter,
@@ -14,6 +13,7 @@ import {
 import { buildStyles, CircularProgressbarWithChildren } from 'react-circular-progressbar';
 import { useAppDispatch, useAppSelector } from 'shared/hooks/redux-hooks';
 import Hint from 'components/Hint/Hint';
+import Difficulty from 'features/Difficulty/Difficulty';
 
 const Home: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -51,7 +51,7 @@ const Home: React.FC = () => {
         </div>
       )}
 
-      {started ? <Hint /> : <Bar />}
+      {started ? <Hint /> : <Difficulty />}
     </div>
   );
 };

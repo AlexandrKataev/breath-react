@@ -1,32 +1,28 @@
 import React from 'react';
 import s from './Info.module.scss';
 
-import { useAppDispatch, useAppSelector } from 'shared/hooks/redux-hooks';
-import { exitAuth } from 'processes/Auth/authSlice';
-import { selectAuth } from 'processes/Auth/selectors';
-
-import userIcon from 'assets/images/user.png';
+import progressIcon from 'assets/images/progress.png';
+import dayIcon from 'assets/images/day.png';
+import daysIcon from '../../assets/images/days.png';
+import Logout from 'features/Logout/Logout';
 
 const Info: React.FC = () => {
-  const dispatch = useAppDispatch();
-  const userEmail = useAppSelector(selectAuth).email;
-
-  const logOutClick = () => {
-    window.localStorage.removeItem('auth');
-    dispatch(exitAuth());
-  };
-
   return (
     <div className={s.body}>
       <h1>{'Дыхательная гимнастика по таблицам дыхания Алчевского'}</h1>
-      <div className={s.user}>
-        <img src={userIcon}></img>
-        <div>{userEmail}</div>
+      <div className={s.items}>
+        <img src={progressIcon}></img>
+        <div>Следите за своим прогрессом.</div>
       </div>
-
-      <button className={s.button} onClick={logOutClick}>
-        Выйти
-      </button>
+      <div className={s.items}>
+        <img src={dayIcon}></img>
+        <div>{'Выполняйте упражнение три раза в день'}</div>
+      </div>
+      <div className={s.items}>
+        <img src={daysIcon}></img>
+        <div>{`Пройдите 30 дней и увеличивайте сложность`}</div>
+      </div>
+      <Logout />
     </div>
   );
 };
