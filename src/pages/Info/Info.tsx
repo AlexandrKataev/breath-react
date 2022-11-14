@@ -1,9 +1,9 @@
 import React from 'react';
 import s from './Info.module.scss';
 
-import progressIcon from 'assets/images/progress.png';
-import dayIcon from 'assets/images/day.png';
-import daysIcon from '../../assets/images/days.png';
+import progressIcon from 'shared/icons/progress.png';
+import dayIcon from 'shared/icons/day.png';
+import daysIcon from 'shared/icons/days.png';
 import Logout from 'features/Logout/Logout';
 
 const Info: React.FC = () => {

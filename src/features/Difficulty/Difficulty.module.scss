@@ -21,8 +21,9 @@
 }
 
 .value {
-  margin: 20px 10px;
-
+  width: 45px;
+  display: flex;
+  justify-content: center;
   color: var(--color-pr);
   font-size: 25px;
   font-weight: 400;

@@ -5,7 +5,7 @@ import { useAppDispatch, useAppSelector } from 'shared/hooks/redux-hooks';
 import { exitAuth } from 'processes/Auth/authSlice';
 import { selectAuth } from 'processes/Auth/selectors';
 
-import userIcon from 'assets/images/user.png';
+import userIcon from 'shared/icons/user.png';
 import Button from 'shared/ui/Button/Button';
 
 const Logout = () => {

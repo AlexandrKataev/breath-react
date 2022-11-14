@@ -1,17 +1,17 @@
 import React from 'react';
 import cx from 'classnames';
 
-import s from './Breath.module.scss';
-import { useAppSelector } from '../../shared/hooks/redux-hooks';
+import s from './Lungs.module.scss';
+import { useAppSelector } from 'shared/hooks/redux-hooks';
 import {
   selectBreathIsVdoh,
   selectBreathIsVidoh,
   selectBreathIsZad,
   selectBreathStarted,
-} from './breathSlice/selectors';
+} from 'widgets/Breath/breathSlice/selectors';
 
-import { useTimer } from './hooks/useTimer';
-import { useSetAnimSpeed } from './hooks/useSetAnimSpeed';
+import { useTimer } from 'widgets/Breath/hooks/useTimer';
+import { useSetAnimSpeed } from 'widgets/Breath/hooks/useSetAnimSpeed';
 
 const Breath: React.FC = () => {
   const started = useAppSelector(selectBreathStarted);

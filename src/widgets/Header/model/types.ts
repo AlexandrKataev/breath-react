@@ -1,6 +1,6 @@
-import infoIcon from 'assets/images/info.png';
-import homeIcon from 'assets/images/home.png';
-import progressIcon from 'assets/images/progress.png';
+import infoIcon from 'shared/icons/info.png';
+import homeIcon from 'shared/icons/home.png';
+import progressIcon from 'shared/icons/progress.png';
 
 export const menuItems = [
   { icon: infoIcon, path: '/breath-react/info' },

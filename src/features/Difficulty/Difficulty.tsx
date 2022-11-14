@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from 'shared/hooks/redux-hooks';
-import { selectBreathDifficulty } from 'components/Breath/breathSlice/selectors';
+import { selectBreathDifficulty } from 'widgets/Breath/breathSlice/selectors';
 
-import minus from 'assets/images/minus.png';
-import plus from 'assets/images/plus.png';
+import minus from 'shared/icons/minus.png';
+import plus from 'shared/icons/plus.png';
 
 import s from './Difficulty.module.scss';
 import {
@@ -11,7 +11,7 @@ import {
   plusDifficulty,
   setDifficulty,
   setTimings,
-} from 'components/Breath/breathSlice/breathSlice';
+} from 'widgets/Breath/breathSlice/breathSlice';
 
 const Difficulty: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -38,7 +38,9 @@ const Difficulty: React.FC = () => {
   return (
     <div className={s.body}>
       <img src={minus} className={!difficulty ? s.inActive : ''} onClick={onClickMinus}></img>
-      <div className={s.value}>{difficulty + 5}</div>
+      <div className={s.value}>
+        <div>{difficulty + 5}</div>
+      </div>
       <img src={plus} onClick={onClickPlus}></img>
     </div>
   );
