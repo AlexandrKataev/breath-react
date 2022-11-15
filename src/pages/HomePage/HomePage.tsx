@@ -1,19 +1,31 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import 'react-circular-progressbar/dist/styles.css';
 import s from './HomePage.module.scss';
 
-import Button from 'features/StartButton/StartButton';
+import { useAppDispatch, useAppSelector } from 'shared/hooks/redux-hooks';
+
+import Breath from 'widgets/Breath/Breath';
+import { selectAuth } from 'processes/Auth/selectors';
+
+import { collection, doc, setDoc, getDoc, onSnapshot } from 'firebase/firestore';
+import db from '../../firebase';
+import { selectProgressState } from 'widgets/Progress/ProgressSlice/selectors';
+import { fetchProgress, pushProgress } from 'widgets/Progress/ProgressSlice/ProgressSlice';
 import { selectBreathStarted } from 'widgets/Breath/breathSlice/selectors';
 
-import { useAppSelector } from 'shared/hooks/redux-hooks';
-import Hint from 'entities/Hint/Hint';
-import Difficulty from 'features/Difficulty/Difficulty';
-import Lungs from 'entities/Lungs/Lungs';
-import Timer from 'features/Timer/Timer';
-import Breath from 'widgets/Breath/Breath';
-
 const Home: React.FC = () => {
+  const dispatch = useAppDispatch();
+  const userId = useAppSelector(selectAuth).id;
+  const progress = useAppSelector(selectProgressState);
   const started = useAppSelector(selectBreathStarted);
+
+  useEffect(() => {
+    dispatch(fetchProgress(userId));
+  }, []);
+
+  // useEffect(() => {
+  //   dispatch(pushProgress({ userId, progress }));
+  // }, [started]);
 
   return (
     <div className={s.body}>
