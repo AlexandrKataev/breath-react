@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 
-import { start } from '../breathSlice/breathSlice';
+import { start } from '../breathSlice';
 
 import { useAppDispatch, useAppSelector } from 'shared/hooks/redux-hooks';
-import { selectBreathVdohTime } from '../breathSlice/selectors';
+import { selectBreathVdohTime } from '../selectors';
 
 export const useSetAnimSpeed = () => {
   const dispatch = useAppDispatch();

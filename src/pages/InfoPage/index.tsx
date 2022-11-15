@@ -4,9 +4,9 @@ import s from './InfoPage.module.scss';
 import { ReactComponent as ProgressIcon } from 'shared/ui/icons/progress.svg';
 import { ReactComponent as DayIcon } from 'shared/ui/icons/day2.svg';
 import { ReactComponent as DaysIcon } from 'shared/ui/icons/days.svg';
-import Logout from 'features/Logout/Logout';
+import { Logout } from 'features/index';
 
-const Info: React.FC = () => {
+export const InfoPage: React.FC = () => {
   return (
     <div className={s.body}>
       <h1>{'Дыхательная гимнастика по таблицам дыхания Алчевского'}</h1>
@@ -37,5 +37,3 @@ const Info: React.FC = () => {
     </div>
   );
 };
-
-export default Info;

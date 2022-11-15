@@ -5,19 +5,19 @@ import s from './StartButton.module.scss';
 import { ReactComponent as Start } from 'shared/ui/icons/start.svg';
 
 import { useAppDispatch, useAppSelector } from 'shared/hooks/redux-hooks';
-import { start } from 'widgets/Breath/breathSlice/breathSlice';
+import { start } from 'widgets/Breath/model/breathSlice';
 import {
   selectBreathDifficulty,
   selectBreathStarted,
   selectTime,
-} from 'widgets/Breath/breathSlice/selectors';
-import { pushProgress, updateProgress } from 'widgets/Progress/ProgressSlice/ProgressSlice';
+} from 'widgets/Breath/model/selectors';
+import { pushProgress, updateProgress } from 'widgets/Progress/model/ProgressSlice';
 import { doc, setDoc } from 'firebase/firestore';
 import db from '../../firebase';
 import { selectAuth } from 'processes/Auth/selectors';
-import { selectProgressState } from 'widgets/Progress/ProgressSlice/selectors';
+import { selectProgressState } from 'widgets/Progress/model/selectors';
 
-const StartButton: React.FC = () => {
+export const StartButton: React.FC = () => {
   const dispatch = useAppDispatch();
 
   const started = useAppSelector(selectBreathStarted);
@@ -29,7 +29,6 @@ const StartButton: React.FC = () => {
 
   const onClickStart = () => {
     dispatch(start(!started));
-    dispatch(pushProgress({ userId, progress, difficulty }));
   };
 
   return (
@@ -40,5 +39,3 @@ const StartButton: React.FC = () => {
     </div>
   );
 };
-
-export default StartButton;

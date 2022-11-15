@@ -1,20 +1,15 @@
 import React, { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from 'shared/hooks/redux-hooks';
-import { selectBreathDifficulty } from 'widgets/Breath/breathSlice/selectors';
+import { selectBreathDifficulty } from 'widgets/Breath/model/selectors';
 
 import { ReactComponent as Minus } from 'shared/ui/icons/minus.svg';
 import { ReactComponent as Plus } from 'shared/ui/icons/plus.svg';
 
 import s from './Difficulty.module.scss';
-import {
-  minusDifficulty,
-  plusDifficulty,
-  setDifficulty,
-  setTimings,
-} from 'widgets/Breath/breathSlice/breathSlice';
+import { minusDifficulty, plusDifficulty, setTimings } from 'widgets/Breath/model/breathSlice';
 import { useDifficultyFromLocalStorage } from './hooks/useDifficultyFromLocalStorage';
 
-const Difficulty: React.FC = () => {
+export const Difficulty: React.FC = () => {
   const dispatch = useAppDispatch();
   const difficulty = useAppSelector(selectBreathDifficulty);
 
@@ -29,7 +24,7 @@ const Difficulty: React.FC = () => {
     difficulty && dispatch(minusDifficulty());
   };
   const onClickPlus = () => {
-    dispatch(plusDifficulty());
+    difficulty <= 34 && dispatch(plusDifficulty());
   };
 
   return (
@@ -39,7 +34,7 @@ const Difficulty: React.FC = () => {
       <div className={s.value}>
         <div>{difficulty + 5}</div>
       </div>
-      <Plus className={s.active} onClick={onClickPlus} />
+      <Plus className={difficulty > 34 ? s.inActive : s.active} onClick={onClickPlus} />
     </div>
   );
 };

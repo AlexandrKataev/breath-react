@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import s from './AuthPage.module.scss';
 
-import Login from 'features/Login/Login';
+import { Login } from 'features/index';
 import { useLocalStorageAuth } from 'features/Login/hooks/useLocalStorageAuth';
 
-const Auth: React.FC = () => {
+export const AuthPage: React.FC = () => {
   useLocalStorageAuth();
   return (
     <div className={s.body}>
@@ -13,5 +13,3 @@ const Auth: React.FC = () => {
     </div>
   );
 };
-
-export default Auth;

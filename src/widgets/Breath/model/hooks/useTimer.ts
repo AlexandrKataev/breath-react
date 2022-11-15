@@ -1,11 +1,8 @@
-import { selectAuth } from './../../../processes/Auth/selectors';
-import { selectProgressState } from './../../Progress/ProgressSlice/selectors';
-import { selectBreathDifficulty } from './../breathSlice/selectors';
+import { selectAuth } from 'processes/Auth/selectors';
+import { selectProgressState } from 'widgets/Progress/model/selectors';
+import { selectBreathDifficulty } from '../selectors';
 import { useEffect } from 'react';
-import { useAppDispatch, useAppSelector } from '../../../shared/hooks/redux-hooks';
-
-import { doc, getFirestore, setDoc } from 'firebase/firestore';
-import db from 'firebase';
+import { useAppDispatch, useAppSelector } from 'shared/hooks/redux-hooks';
 
 import {
   selectBreathIsVdoh,
@@ -16,7 +13,7 @@ import {
   selectBreathVdohTime,
   selectBreathZadTime,
   selectTime,
-} from '../breathSlice/selectors';
+} from '../selectors';
 import {
   nextItter,
   setIsVdoh,
@@ -27,8 +24,8 @@ import {
   timeMinus,
   resetItter,
   stop,
-} from '../breathSlice/breathSlice';
-import { updateProgress } from 'widgets/Progress/ProgressSlice/ProgressSlice';
+} from '../breathSlice';
+import { pushProgress, updateProgress } from 'widgets/Progress/model/ProgressSlice';
 
 export const useTimer = () => {
   const dispatch = useAppDispatch();
@@ -45,13 +42,6 @@ export const useTimer = () => {
   const isZad = useAppSelector(selectBreathIsZad);
   const itter = useAppSelector(selectBreathItter);
   const time = useAppSelector(selectTime);
-
-  // const updateProgressDB = async () => {
-  //   await setDoc(doc(db, 'progress', 'LA'), {
-  //     id: userId,
-  //     progress,
-  //   });
-  // };
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -78,7 +68,7 @@ export const useTimer = () => {
         dispatch(start(false));
         clearInterval(timer);
         dispatch(resetItter());
-        dispatch(updateProgress(difficulty));
+        dispatch(pushProgress({ userId, progress, difficulty }));
       }
     }
 

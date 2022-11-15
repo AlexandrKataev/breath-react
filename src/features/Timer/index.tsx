@@ -3,15 +3,15 @@ import s from './Timer.module.scss';
 
 import { buildStyles, CircularProgressbarWithChildren } from 'react-circular-progressbar';
 import { useAppDispatch, useAppSelector } from 'shared/hooks/redux-hooks';
-import { start } from 'widgets/Breath/breathSlice/breathSlice';
+import { start } from 'widgets/Breath/model/breathSlice';
 import {
   selectBreathIsVidoh,
   selectBreathItter,
   selectBreathStarted,
   selectTime,
-} from 'widgets/Breath/breathSlice/selectors';
+} from 'widgets/Breath/model/selectors';
 
-const Timer = () => {
+export const Timer = () => {
   const dispatch = useAppDispatch();
   const time = useAppSelector(selectTime);
   const itter = useAppSelector(selectBreathItter);
@@ -43,5 +43,3 @@ const Timer = () => {
     </div>
   );
 };
-
-export default Timer;

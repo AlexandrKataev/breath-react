@@ -8,7 +8,7 @@ import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { setAuth } from 'processes/Auth/authSlice';
 import { useAppDispatch } from 'shared/hooks/redux-hooks';
 
-const Login: React.FC = () => {
+export const Login: React.FC = () => {
   const dispatch = useAppDispatch();
 
   useLocalStorageAuth();
@@ -53,5 +53,3 @@ const Login: React.FC = () => {
     </>
   );
 };
-
-export default Login;

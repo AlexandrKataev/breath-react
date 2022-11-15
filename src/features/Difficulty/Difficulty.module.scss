@@ -6,22 +6,20 @@
   margin-top: 10px;
 }
 
-.active {
+.active,
+.inActive {
   cursor: pointer;
-  width: 30px;
-  height: 30px;
+  margin: 10px 10px;
+  width: 35px;
+  height: 35px;
+}
+.active {
   fill: var(--p2);
-  margin: 20px 10px;
 }
 
 .inActive,
 .inActive * {
-  margin: 20px 10px;
-
-  cursor: pointer;
-  width: 30px;
-  height: 30px;
-  fill: var(--g);
+  fill: var(--b1);
 }
 
 .value {
@@ -29,7 +27,7 @@
   display: flex;
   justify-content: center;
   color: var(--p2);
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 400;
   letter-spacing: 0.05em;
 }

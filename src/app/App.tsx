@@ -2,7 +2,7 @@ import React from 'react';
 
 import './App.scss';
 import Routing from 'pages/Routing';
-import Header from 'widgets/Header/Header';
+import { Header } from 'widgets/index';
 
 const App: React.FC = () => {
   return (

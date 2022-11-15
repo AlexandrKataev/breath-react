@@ -8,20 +8,13 @@ import {
   selectBreathIsVidoh,
   selectBreathIsZad,
   selectBreathStarted,
-} from 'widgets/Breath/breathSlice/selectors';
+} from 'widgets/Breath/model/selectors';
 
-import { useTimer } from 'widgets/Breath/hooks/useTimer';
-import { useSetAnimSpeed } from 'widgets/Breath/hooks/useSetAnimSpeed';
-
-const Breath: React.FC = () => {
+export const Lungs: React.FC = () => {
   const started = useAppSelector(selectBreathStarted);
   const isVdoh = useAppSelector(selectBreathIsVdoh);
   const isVidoh = useAppSelector(selectBreathIsVidoh);
   const isZad = useAppSelector(selectBreathIsZad);
-
-  useTimer();
-
-  useSetAnimSpeed();
 
   return (
     <div className={s.body}>
@@ -37,5 +30,3 @@ const Breath: React.FC = () => {
     </div>
   );
 };
-
-export default Breath;

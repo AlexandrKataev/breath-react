@@ -1,6 +1,6 @@
 import { useAppDispatch } from 'shared/hooks/redux-hooks';
 import { useEffect } from 'react';
-import { setDifficulty } from 'widgets/Breath/breathSlice/breathSlice';
+import { setDifficulty } from 'widgets/Breath/model/breathSlice';
 
 export const useDifficultyFromLocalStorage = () => {
   const dispatch = useAppDispatch();

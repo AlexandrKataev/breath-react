@@ -8,7 +8,7 @@ import { selectAuth } from 'processes/Auth/selectors';
 import { ReactComponent as UserIcon } from 'shared/ui/icons/user.svg';
 import Button from 'shared/ui/Button/Button';
 
-const Logout = () => {
+export const Logout = () => {
   const dispatch = useAppDispatch();
   const userEmail = useAppSelector(selectAuth).email;
 
@@ -26,5 +26,3 @@ const Logout = () => {
     </div>
   );
 };
-
-export default Logout;

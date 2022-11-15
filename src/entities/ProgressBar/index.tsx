@@ -1,11 +1,11 @@
 import React from 'react';
 import { useAppSelector } from 'shared/hooks/redux-hooks';
-import { selectBreathDifficulty } from 'widgets/Breath/breathSlice/selectors';
-import { selectProgressState } from 'widgets/Progress/ProgressSlice/selectors';
+import { selectBreathDifficulty } from 'widgets/Breath/model/selectors';
+import { selectProgressState } from 'widgets/Progress/model/selectors';
 
 import s from './ProgressBar.module.scss';
 
-const ProgressBar: React.FC = () => {
+export const ProgressBar: React.FC = () => {
   const progress = useAppSelector(selectProgressState);
   const currentDifficulty = useAppSelector(selectBreathDifficulty);
   const count = progress[currentDifficulty];
@@ -41,5 +41,3 @@ const ProgressBar: React.FC = () => {
     </div>
   );
 };
-
-export default ProgressBar;
