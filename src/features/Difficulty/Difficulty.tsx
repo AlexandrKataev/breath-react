@@ -12,16 +12,13 @@ import {
   setDifficulty,
   setTimings,
 } from 'widgets/Breath/breathSlice/breathSlice';
+import { useDifficultyFromLocalStorage } from './hooks/useDifficultyFromLocalStorage';
 
 const Difficulty: React.FC = () => {
   const dispatch = useAppDispatch();
   const difficulty = useAppSelector(selectBreathDifficulty);
-  useEffect(() => {
-    const difficultyFromLocalStorage = window.localStorage.getItem('difficulty');
-    if (difficultyFromLocalStorage) {
-      dispatch(setDifficulty(Number(difficultyFromLocalStorage)));
-    }
-  }, []);
+
+  useDifficultyFromLocalStorage();
 
   useEffect(() => {
     dispatch(setTimings());

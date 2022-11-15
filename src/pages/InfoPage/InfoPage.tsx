@@ -13,6 +13,14 @@ const Info: React.FC = () => {
       <div className={s.description}>
         <div className={s.item}>
           <ProgressIcon className={s.icon} />
+          <div>{'Найдите комфортную для себя сложность'}</div>
+        </div>
+        <div className={s.item}>
+          <DayIcon className={s.icon} />
+          <div>{'Выполняйте плавный вдох через нос, и легкий выдох без форсирования воздуха'}</div>
+        </div>
+        <div className={s.item}>
+          <ProgressIcon className={s.icon} />
           <div>{'Следите за своим прогрессом'}</div>
         </div>
         <div className={s.item}>
