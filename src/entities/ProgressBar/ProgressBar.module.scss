@@ -24,12 +24,15 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-
-  background-color: rgb(218, 99, 158);
+  transition: 0.2s;
 }
 
 .item {
-  opacity: 0.1;
+  background-color: var(--b1);
+}
+
+.item_active {
+  background-color: var(--p);
 }
 
 .difficulty {

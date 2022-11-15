@@ -13,7 +13,7 @@ const Info: React.FC = () => {
       <div className={s.description}>
         <div className={s.item}>
           <ProgressIcon className={s.icon} />
-          <div>{'Следите за своим прогрессом.'}</div>
+          <div>{'Следите за своим прогрессом'}</div>
         </div>
         <div className={s.item}>
           <DayIcon className={s.icon} />

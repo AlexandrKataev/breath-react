@@ -26,15 +26,15 @@ const Timer = () => {
       <CircularProgressbarWithChildren
         value={itter * 10 + 1}
         // circleRatio={0.1}
-        strokeWidth={2.5}
+        strokeWidth={3}
         // text={!started ? 'Start' : String(time)}
         styles={buildStyles({
           textSize: '40px',
           strokeLinecap: 'round',
           pathTransitionDuration: time,
-          pathColor: '#cd82a5',
-          textColor: '#cd82a5',
-          trailColor: '#cd82a54f',
+          pathColor: 'var(--p)',
+          textColor: 'var(--p)',
+          trailColor: 'var(--b3)',
           backgroundColor: '#cd82a5',
           pathTransition: 'linear',
         })}>

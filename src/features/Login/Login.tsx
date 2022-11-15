@@ -46,10 +46,10 @@ const Login: React.FC = () => {
   };
   return (
     <>
-      <div className={s.reg_choose}>
-        <div className={s.reg_active}>{'Войти с Google'}</div>
+      <div className={s.body}>
+        <div className={s.title}>{'Войти с Google'}</div>
+        <Button text={'Войти'} function={handleLogin} />
       </div>
-      <Button text={'Войти'} function={handleLogin} />
     </>
   );
 };

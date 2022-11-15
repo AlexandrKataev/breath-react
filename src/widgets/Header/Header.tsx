@@ -28,7 +28,7 @@ const Header: React.FC = () => {
   ) : (
     <div className={s.body}>
       {menuItems.map((el) => {
-        return <img className={s.icon} key={el.path}></img>;
+        return <el.icon className={s.icon} key={el.path} />; // <img className={s.icon} key={el.path}></img>;
       })}
     </div>
   );

@@ -1,21 +1,15 @@
 :root {
-  --p: #cd82a5;
+  --p: #ef98d0;
   --pa: #fce1e3;
-  --p2: #f66c8a;
-  --b: #222129;
-  --b1: #1d1c24;
-  --b2: #2d2c35;
+  --p2: #ef7dc6;
+  --p3: #953ce1;
+  --p4: #6242f5;
+  --t: #9897a3;
+  --t1: #ebebeb;
+  --b: #221f2e; // 222129
+  --b1: #2e2b3f; // 2e2b3f  1d1c24
+  --b2: #1e1c29;
+  --b3: #3a364e;
+  --g: #514e61;
   --animTime: 10s;
 }
-
-// $mainColor: #cd82a5;
-// $bColor: #222129;
-// $bColor1: #2d2b35;
-// $bColor2: #131218;
-
-// :export {
-//   mainColor: $mainColor;
-//   bColor: $bColor;
-//   bColor1: $bColor1;
-//   bColor2: $bColor2;
-// }

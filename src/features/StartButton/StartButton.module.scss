@@ -1,19 +1,19 @@
 .start_button {
-  // margin-top: -10px;
+  margin-top: -10px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: calc(20vh - 10px);
   height: calc(20vh - 10px);
 
-  color: #cd82a5;
-  border: 3px solid #f66c8a;
+  border: 3px solid var(--p2);
   border-radius: 50%;
-  background-color: var(--b1);
+  background-color: var(--b);
+  // box-shadow: 3.2px 6.4px 6.4px var(--b2);
 }
 
 .start_icon {
-  fill: var(--p);
+  fill: var(--p2);
   width: 30%;
   height: 30%;
   margin: 0px 0 0 3px;
