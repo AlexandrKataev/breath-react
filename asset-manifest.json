@@ -1,16 +1,23 @@
 {
   "files": {
-    "main.css": "/breath-react/static/css/main.e6e5709f.css",
-    "main.js": "/breath-react/static/js/main.e3e45797.js",
-    "static/media/info.png": "/breath-react/static/media/info.990473abb550b29254c9.png",
-    "static/media/user.png": "/breath-react/static/media/user.eab44fb255edb7c8a89d.png",
+    "main.css": "/breath-react/static/css/main.a89b22e1.css",
+    "main.js": "/breath-react/static/js/main.a673bb19.js",
+    "static/media/days.svg": "/breath-react/static/media/days.d848c4d1d356d7525a641c18f11bc3b3.svg",
+    "static/media/user.svg": "/breath-react/static/media/user.789e22fcd3cf66fa3ba7dc45870e2d7c.svg",
     "static/media/breath.svg": "/breath-react/static/media/breath.d1610f51e8523a77dd1f.svg",
+    "static/media/minus.svg": "/breath-react/static/media/minus.eeaaf30a19914c620d18d419d0ff8cc8.svg",
+    "static/media/day2.svg": "/breath-react/static/media/day2.42953e1fd8607f1671f592ce7e5e0a92.svg",
     "index.html": "/breath-react/index.html",
-    "main.e6e5709f.css.map": "/breath-react/static/css/main.e6e5709f.css.map",
-    "main.e3e45797.js.map": "/breath-react/static/js/main.e3e45797.js.map"
+    "static/media/home.svg": "/breath-react/static/media/home.ab16ac4389c1dd8fd961b84b9f41f778.svg",
+    "static/media/progress.svg": "/breath-react/static/media/progress.744acab12b2deb01328010a2e3ef9f4a.svg",
+    "static/media/start.svg": "/breath-react/static/media/start.a9a869f567a32d6811f0ce4030b52203.svg",
+    "static/media/info.svg": "/breath-react/static/media/info.a0eea3d72c334cf4f6cb80f76bf1fb7f.svg",
+    "static/media/plus.svg": "/breath-react/static/media/plus.cd5994c8a53b9b620bcbd9b106e0e6ab.svg",
+    "main.a89b22e1.css.map": "/breath-react/static/css/main.a89b22e1.css.map",
+    "main.a673bb19.js.map": "/breath-react/static/js/main.a673bb19.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6e5709f.css",
-    "static/js/main.e3e45797.js"
+    "static/css/main.a89b22e1.css",
+    "static/js/main.a673bb19.js"
   ]
 }
