@@ -4,4 +4,9 @@
   align-items: center;
   height: calc(100vh);
   background-color: #222129;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }

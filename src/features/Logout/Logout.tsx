@@ -5,7 +5,7 @@ import { useAppDispatch, useAppSelector } from 'shared/hooks/redux-hooks';
 import { exitAuth } from 'processes/Auth/authSlice';
 import { selectAuth } from 'processes/Auth/selectors';
 
-import userIcon from 'shared/icons/user.png';
+import { ReactComponent as UserIcon } from 'shared/ui/icons/user.svg';
 import Button from 'shared/ui/Button/Button';
 
 const Logout = () => {
@@ -19,7 +19,7 @@ const Logout = () => {
   return (
     <div className={s.body}>
       <div className={s.user}>
-        <img src={userIcon}></img>
+        <UserIcon className={s.icon} />
         <div>{userEmail}</div>
       </div>
       <Button text={'Выйти'} function={logOutClick} />

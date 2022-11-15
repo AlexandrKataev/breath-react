@@ -1,0 +1,36 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #cd82a5;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+h1 {
+  padding: 20px 40px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  font-size: 22px;
+  background-color: var(--b1);
+}
+
+.description {
+  width: 600px;
+  background-color: var(--b1);
+  border-radius: 20px;
+  padding: 20px 20px 20px 40px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+  fill: var(--p);
+}

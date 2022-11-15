@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
-import s from './Auth.module.scss';
+import s from './AuthPage.module.scss';
 
-import { useAppDispatch } from 'shared/hooks/redux-hooks';
-import { setAuth } from 'processes/Auth/authSlice';
 import Login from 'features/Login/Login';
 import { useLocalStorageAuth } from 'features/Login/hooks/useLocalStorageAuth';
 

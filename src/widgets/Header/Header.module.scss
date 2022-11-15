@@ -2,17 +2,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #222129;
-  color: #cd82a5;
+  background-color: var(--b1);
+  color: var(--p);
+  padding: 20px 20px;
+  margin: 10px;
+  border-radius: 20px;
 
   // border: salmon solid 1px;
 }
 
 .icon {
   display: flex;
-  margin: 30px 20px;
-  color: #cd82a5;
+  margin: 0px 20px;
+  fill: var(--p);
   width: 24px;
+  height: 24px;
 }
 
 .inActive {

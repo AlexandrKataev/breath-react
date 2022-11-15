@@ -1,13 +1,13 @@
 .body {
-  display: flex;
-  max-width: 80%;
+  width: 50vh;
+  height: 50vh;
+  max-width: 100%;
 }
 
 #myContainer {
-  width: 47vh;
-  height: 47vh;
-  max-width: 70vw;
-  max-height: 70vw;
+  margin: 0 auto;
+  width: calc(60vh - 100px);
+  height: calc(60vh - 100px);
   background-image: linear-gradient(rgb(255, 99, 255), rgb(255, 127, 115));
   -webkit-mask-box-image: url(../../shared/icons/breath.svg);
 }

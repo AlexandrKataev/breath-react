@@ -1,6 +1,6 @@
 import React from 'react';
 import 'react-circular-progressbar/dist/styles.css';
-import s from './Home.module.scss';
+import s from './Breath.module.scss';
 
 import Button from 'features/StartButton/StartButton';
 import { selectBreathStarted } from 'widgets/Breath/breathSlice/selectors';
@@ -11,17 +11,16 @@ import Difficulty from 'features/Difficulty/Difficulty';
 import Lungs from 'entities/Lungs/Lungs';
 import Timer from 'features/Timer/Timer';
 
-const Home: React.FC = () => {
+const Breath: React.FC = () => {
   const started = useAppSelector(selectBreathStarted);
 
   return (
     <div className={s.body}>
       <Lungs />
       {!started ? <Button /> : <Timer />}
-
       {started ? <Hint /> : <Difficulty />}
     </div>
   );
 };
 
-export default Home;
+export default Breath;

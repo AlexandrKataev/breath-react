@@ -2,7 +2,6 @@ import React from 'react';
 
 import s from './Login.module.scss';
 import Button from 'shared/ui/Button/Button';
-// import { handleLogin } from './hooks/useHandleLogin';
 import { useLocalStorageAuth } from './hooks/useLocalStorageAuth';
 
 import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
@@ -11,15 +10,15 @@ import { useAppDispatch } from 'shared/hooks/redux-hooks';
 
 const Login: React.FC = () => {
   const dispatch = useAppDispatch();
-  // useLocalStorageAuth();
+
+  useLocalStorageAuth();
 
   const handleLogin = () => {
     const provider = new GoogleAuthProvider();
     const auth = getAuth();
-    console.log(auth);
+
     signInWithPopup(auth, provider)
       .then((result) => {
-        console.log(result.user);
         const credential = GoogleAuthProvider.credentialFromResult(result);
         const token = credential?.accessToken;
         const user = result.user;

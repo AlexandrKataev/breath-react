@@ -9,7 +9,7 @@ const Hint: React.FC = () => {
   const hint = useAppSelector(selectBreathHint);
   const time = useAppSelector(selectTime);
   useEffect(() => {
-    if (time === 2) {
+    if (time === 1) {
       dispatch(setReady());
     }
   }, [time]);

@@ -1,13 +1,14 @@
-import { selectBreathDifficulty } from 'widgets/Breath/breathSlice/selectors';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useAppSelector } from 'shared/hooks/redux-hooks';
-import { arrayBuffer } from 'stream/consumers';
+import { selectBreathDifficulty } from 'widgets/Breath/breathSlice/selectors';
+import { selectProgressState } from 'widgets/Progress/ProgressSlice/selectors';
+
 import s from './ProgressBar.module.scss';
 
 const ProgressBar: React.FC = () => {
-  const difficulty = useAppSelector(selectBreathDifficulty);
-
-  const count = 96;
+  const progress = useAppSelector(selectProgressState);
+  const currentDifficulty = useAppSelector(selectBreathDifficulty);
+  const count = progress[currentDifficulty];
 
   let arr = new Array(90);
 
@@ -18,18 +19,16 @@ const ProgressBar: React.FC = () => {
     arr[i] = true;
   }
 
-  console.log(arr);
-
   const items = arr.map((el, i) => {
-    if (i < 30) return <div className={el ? s.item_active : s.item} />;
+    if (i < 30) return <div key={i} className={el ? s.item_active : s.item} />;
   });
 
   const items2 = arr.map((el, i) => {
-    if (i >= 30 && i < 60) return <div className={el ? s.item_active : s.item} />;
+    if (i >= 30 && i < 60) return <div key={i} className={el ? s.item_active : s.item} />;
   });
 
   const items3 = arr.map((el, i) => {
-    if (i >= 60 && i < 90) return <div className={el ? s.item_active : s.item} />;
+    if (i >= 60 && i < 90) return <div key={i} className={el ? s.item_active : s.item} />;
   });
 
   return (

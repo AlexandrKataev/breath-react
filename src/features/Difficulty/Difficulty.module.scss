@@ -2,8 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #222129;
-  color: #cd82a5;
+  background-color: var(--b1);
+  color: var(--p2);
+  margin-top: 10px;
 
   // border: salmon solid 1px;
 }
@@ -11,13 +12,26 @@
 .body img {
   cursor: pointer;
   display: flex;
-  margin: 20px 10px;
-  color: #cd82a5;
+
+  color: var(--p);
   width: 24px;
 }
 
+.active {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  fill: var(--p2);
+  margin: 20px 10px;
+}
+
 .inActive {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  fill: var(--p2);
   opacity: 0.3;
+  margin: 20px 10px;
 }
 
 .value {

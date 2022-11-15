@@ -1,10 +1,10 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { useAuth } from 'shared/hooks/use-auth';
 
-import Auth from './Auth/Auth';
-import Home from './Home/Home';
-import Info from './Info/Info';
-import ProgressPage from './Progress/Progress';
+import Auth from './AuthPage/AuthPage';
+import Home from './HomePage/HomePage';
+import Info from './InfoPage/InfoPage';
+import ProgressPage from './ProgressPage/ProgressPage';
 
 const Routing = () => {
   const { isAuth } = useAuth();
