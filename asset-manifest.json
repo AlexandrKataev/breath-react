@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/breath-react/static/css/main.4dd35d01.css",
-    "main.js": "/breath-react/static/js/main.d913b686.js",
+    "main.js": "/breath-react/static/js/main.5601301a.js",
     "static/media/days.svg": "/breath-react/static/media/days.d848c4d1d356d7525a641c18f11bc3b3.svg",
     "static/media/user.svg": "/breath-react/static/media/user.233f880702c9491934dbf8cd5b7d074d.svg",
     "static/media/breath.svg": "/breath-react/static/media/breath.d1610f51e8523a77dd1f.svg",
@@ -14,10 +14,10 @@
     "static/media/plus.svg": "/breath-react/static/media/plus.0f9d42c2a765cc639ab303256a5fc3c2.svg",
     "static/media/minus.svg": "/breath-react/static/media/minus.0def945ef39a5d0eb5ab02be620714e0.svg",
     "main.4dd35d01.css.map": "/breath-react/static/css/main.4dd35d01.css.map",
-    "main.d913b686.js.map": "/breath-react/static/js/main.d913b686.js.map"
+    "main.5601301a.js.map": "/breath-react/static/js/main.5601301a.js.map"
   },
   "entrypoints": [
     "static/css/main.4dd35d01.css",
-    "static/js/main.d913b686.js"
+    "static/js/main.5601301a.js"
   ]
 }
