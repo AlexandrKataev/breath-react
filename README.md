@@ -1,7 +1,7 @@
 # Breath App
 
 An app to improve your breathing
-https://alexandrkataev.github.io/breath-react/
+https://breath-react.vercel.app/breath-react/home
 
 ## Technology Stack
 
