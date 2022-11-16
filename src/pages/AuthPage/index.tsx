@@ -9,7 +9,7 @@ export const AuthPage: React.FC = () => {
   return (
     <div className={s.body}>
       <Login />
-      <div className={s.description}>{'Авторизуйся и прокачай своё дыхание.'}</div>
+      <div className={s.description}>{'Авторизуйся и прокачай своё дыхание'}</div>
     </div>
   );
 };

@@ -16,10 +16,8 @@ https://alexandrkataev.github.io/breath-react/
 
 #### Back-end
 
-- Express
-- MongoDB
-- JWT
-- Bcrypt
+- Firebase Authentication
+- Firestore Database
 
 ## Structure
 
