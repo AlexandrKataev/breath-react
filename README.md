@@ -12,6 +12,7 @@ https://alexandrkataev.github.io/breath-react/
 - CSS-Modules / SCSS
 - Firebase Authentication
 - Firestore Database
+- Vercel
 
 ## Structure
 
