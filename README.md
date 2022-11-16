@@ -16,4 +16,4 @@ https://alexandrkataev.github.io/breath-react/
 
 ## Structure
 
-![Структура не найдена](./public/breath-structure.drawio.png 'Front-end structure')
+![Структура не найдена](./src/assets/breath-structure.drawio.png 'Front-end structure')

@@ -4,20 +4,26 @@ import s from './InfoPage.module.scss';
 import { ReactComponent as ProgressIcon } from 'shared/ui/icons/progress.svg';
 import { ReactComponent as DayIcon } from 'shared/ui/icons/day2.svg';
 import { ReactComponent as DaysIcon } from 'shared/ui/icons/days.svg';
+import { ReactComponent as PlusIcon } from 'shared/ui/icons/plus.svg';
+import { ReactComponent as BreathIcon } from 'shared/ui/icons/breath2.svg';
 import { Logout } from 'features/index';
 
 export const InfoPage: React.FC = () => {
   return (
     <div className={s.body}>
-      <h1>{'Дыхательная гимнастика по таблицам дыхания Алчевского'}</h1>
+      <div className={s.title}>
+        <div>{'Дыхательная гимнастика по таблицам дыхания Алчевского'}</div>
+      </div>
       <div className={s.description}>
         <div className={s.item}>
-          <ProgressIcon className={s.icon} />
+          <PlusIcon className={s.icon} />
           <div>{'Найдите комфортную для себя сложность'}</div>
         </div>
         <div className={s.item}>
-          <DayIcon className={s.icon} />
-          <div>{'Выполняйте плавный вдох через нос, и легкий выдох без форсирования воздуха'}</div>
+          <BreathIcon className={s.icon} />
+          <div>
+            {'Выполняйте плавный вдох через нос, и легкий выдох через рот без форсирования воздуха'}
+          </div>
         </div>
         <div className={s.item}>
           <ProgressIcon className={s.icon} />
