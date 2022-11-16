@@ -47,7 +47,7 @@ export const Login: React.FC = () => {
   return (
     <>
       <div className={s.body}>
-        <div className={s.title}>{'Войти с Google'}</div>
+        <div className={s.title}>Войти с Google</div>
         <Button text={'Войти'} function={handleLogin} />
       </div>
     </>
