@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './Logout.module.scss';
 
-import { useAppDispatch, useAppSelector } from 'shared/hooks/redux-hooks';
+import { useAppDispatch, useAppSelector } from 'app/store/hooks';
 import { exitAuth } from 'processes/Auth/authSlice';
 import { selectAuth } from 'processes/Auth/selectors';
 

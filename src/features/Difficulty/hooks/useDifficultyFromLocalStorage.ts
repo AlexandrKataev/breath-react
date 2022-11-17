@@ -1,4 +1,4 @@
-import { useAppDispatch } from 'shared/hooks/redux-hooks';
+import { useAppDispatch } from 'app/store/hooks';
 import { useEffect } from 'react';
 import { setDifficulty } from 'widgets/Breath/model/breathSlice';
 

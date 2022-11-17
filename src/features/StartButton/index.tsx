@@ -4,7 +4,7 @@ import s from './StartButton.module.scss';
 
 import { ReactComponent as Start } from 'shared/ui/icons/start.svg';
 
-import { useAppDispatch, useAppSelector } from 'shared/hooks/redux-hooks';
+import { useAppDispatch, useAppSelector } from 'app/store/hooks';
 import { start } from 'widgets/Breath/model/breathSlice';
 import {
   selectBreathDifficulty,

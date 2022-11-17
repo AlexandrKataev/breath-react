@@ -1,4 +1,4 @@
-import { useAppSelector } from 'shared/hooks/redux-hooks';
+import { useAppSelector } from 'app/store/hooks';
 import { selectBreathDifficulty } from 'widgets/Breath/model/selectors';
 import { selectProgressState } from '../selectors';
 

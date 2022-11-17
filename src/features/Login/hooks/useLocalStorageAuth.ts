@@ -1,6 +1,6 @@
 import { setAuth } from 'processes/Auth/authSlice';
 import { useEffect } from 'react';
-import { useAppDispatch } from 'shared/hooks/redux-hooks';
+import { useAppDispatch } from 'app/store/hooks';
 
 export const useLocalStorageAuth = () => {
   const dispatch = useAppDispatch();

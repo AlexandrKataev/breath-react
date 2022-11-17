@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useAppDispatch, useAppSelector } from 'shared/hooks/redux-hooks';
+import { useAppDispatch, useAppSelector } from 'app/store/hooks';
 import { selectBreathDifficulty } from 'widgets/Breath/model/selectors';
 
 import { ReactComponent as Minus } from 'shared/ui/icons/minus.svg';

@@ -2,7 +2,7 @@ import { selectAuth } from 'processes/Auth/selectors';
 import { selectProgressState } from 'widgets/Progress/model/selectors';
 import { selectBreathDifficulty } from '../selectors';
 import { useEffect } from 'react';
-import { useAppDispatch, useAppSelector } from 'shared/hooks/redux-hooks';
+import { useAppDispatch, useAppSelector } from 'app/store/hooks';
 
 import {
   selectBreathIsVdoh,

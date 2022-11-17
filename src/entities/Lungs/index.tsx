@@ -2,7 +2,7 @@ import React from 'react';
 import cx from 'classnames';
 import s from './Lungs.module.scss';
 
-import { useAppSelector } from 'shared/hooks/redux-hooks';
+import { useAppSelector } from 'app/store/hooks';
 import {
   selectBreathIsVdoh,
   selectBreathIsVidoh,

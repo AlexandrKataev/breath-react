@@ -3,7 +3,6 @@ import { FetchProgressArgs, progressState, pushProgressArgs, Status } from './ty
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { collection, doc, setDoc, getDoc, onSnapshot, updateDoc } from 'firebase/firestore';
 import db from '../../../firebase';
-import { AppDispatch, RootState } from 'shared/types';
 import { _ActionCreatorWithPreparedPayload } from '@reduxjs/toolkit/dist/createAction';
 
 export const fetchProgress = createAsyncThunk<number[], FetchProgressArgs>(

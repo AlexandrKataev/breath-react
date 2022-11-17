@@ -2,7 +2,7 @@ import React from 'react';
 import s from './Timer.module.scss';
 
 import { buildStyles, CircularProgressbarWithChildren } from 'react-circular-progressbar';
-import { useAppDispatch, useAppSelector } from 'shared/hooks/redux-hooks';
+import { useAppDispatch, useAppSelector } from 'app/store/hooks';
 import { start } from 'widgets/Breath/model/breathSlice';
 import {
   selectBreathIsVidoh,

@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import s from './Header.module.scss';
 
-import { useAppSelector } from 'shared/hooks/redux-hooks';
+import { useAppSelector } from 'app/store/hooks';
 import { selectAuth } from 'processes/Auth/selectors';
 import { menuItems } from './model/types';
 

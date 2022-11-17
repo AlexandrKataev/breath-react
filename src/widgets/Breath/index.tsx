@@ -6,7 +6,7 @@ import { Lungs, Hint } from 'entities/index';
 import { StartButton, Timer, Difficulty } from 'features/index';
 
 import { selectBreathStarted } from 'widgets/Breath/model/selectors';
-import { useAppSelector } from 'shared/hooks/redux-hooks';
+import { useAppSelector } from 'app/store/hooks';
 
 import { useTimer } from './model/hooks/useTimer';
 import { useSetAnimSpeed } from './model/hooks/useSetAnimSpeed';

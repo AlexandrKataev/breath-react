@@ -6,7 +6,7 @@ import { useLocalStorageAuth } from './hooks/useLocalStorageAuth';
 
 import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { setAuth } from 'processes/Auth/authSlice';
-import { useAppDispatch } from 'shared/hooks/redux-hooks';
+import { useAppDispatch } from 'app/store/hooks';
 
 export const Login: React.FC = () => {
   const dispatch = useAppDispatch();

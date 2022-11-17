@@ -1,5 +1,5 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
-import { useAuth } from 'shared/hooks/use-auth';
+import { useAuth } from 'processes/Auth/hooks/use-auth';
 
 import { AuthPage, HomePage, InfoPage, ProgressPage } from 'pages/index';
 
