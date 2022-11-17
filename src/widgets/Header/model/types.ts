@@ -3,7 +3,7 @@ import { ReactComponent as homeIcon } from 'shared/ui/icons/home.svg';
 import { ReactComponent as ProgressIcon } from 'shared/ui/icons/progress.svg';
 
 export const menuItems = [
-  { icon: infoIcon, path: '/breath-react/info' },
-  { icon: homeIcon, path: '/breath-react/home' },
-  { icon: ProgressIcon, path: '/breath-react/progress' },
+  { icon: infoIcon, path: '/info' },
+  { icon: homeIcon, path: '/home' },
+  { icon: ProgressIcon, path: '/progress' },
 ];

@@ -7,15 +7,15 @@ const Routing = () => {
   const { isAuth } = useAuth();
   return isAuth ? (
     <Routes>
-      <Route path="/breath-react/home" element={<HomePage />} />
-      <Route path="/breath-react/info" element={<InfoPage />} />
-      <Route path="/breath-react/progress" element={<ProgressPage />} />
-      <Route path="*" element={<Navigate to="/breath-react/home" replace />} />
+      <Route path="/home" element={<HomePage />} />
+      <Route path="/info" element={<InfoPage />} />
+      <Route path="/progress" element={<ProgressPage />} />
+      <Route path="*" element={<Navigate to="/home" replace />} />
     </Routes>
   ) : (
     <Routes>
-      <Route path="/breath-react/auth" element={<AuthPage />} />
-      <Route path="*" element={<Navigate to="/breath-react/auth" replace />} />
+      <Route path="/auth" element={<AuthPage />} />
+      <Route path="*" element={<Navigate to="/auth" replace />} />
     </Routes>
   );
 };
