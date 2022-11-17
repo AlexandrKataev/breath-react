@@ -5,6 +5,7 @@ import { AuthPage, HomePage, InfoPage, ProgressPage } from 'pages/index';
 
 const Routing: React.FC = () => {
   const { isAuth } = useAuth();
+
   return isAuth ? (
     <Routes>
       <Route path="/home" element={<HomePage />} />
