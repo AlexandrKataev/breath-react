@@ -10,13 +10,14 @@ import { useAppSelector } from 'app/store/hooks';
 
 import { useTimer } from './model/hooks/useTimer';
 import { useSetAnimSpeed } from './model/hooks/useSetAnimSpeed';
+import { useFetchProgress } from 'widgets/Progress/model/hooks/useFetchProgress';
 
 export const Breath: React.FC = () => {
   const started = useAppSelector(selectBreathStarted);
 
   useTimer();
-
   useSetAnimSpeed();
+  useFetchProgress();
 
   return (
     <div className={s.body}>

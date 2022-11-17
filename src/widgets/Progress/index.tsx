@@ -4,17 +4,11 @@ import s from './Progress.module.scss';
 
 import { ProgressBar } from 'entities/index';
 import { Difficulty } from 'features/index';
-import { useAppDispatch, useAppSelector } from 'app/store/hooks';
-import { selectAuth } from 'processes/Auth/selectors';
-import { fetchProgress } from './model/ProgressSlice';
+
+import { useFetchProgress } from './model/hooks/useFetchProgress';
 
 export const Progress: React.FC = () => {
-  const dispatch = useAppDispatch();
-  const userId = useAppSelector(selectAuth).id;
-
-  useEffect(() => {
-    dispatch(fetchProgress(userId));
-  }, []);
+  useFetchProgress();
 
   return (
     <div>
