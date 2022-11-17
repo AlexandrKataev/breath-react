@@ -10,10 +10,8 @@ export const useSetAnimSpeed = () => {
   const vdohTime = useAppSelector(selectBreathVdohTime);
 
   useEffect(() => {
-    // @ts-ignore
-    document.querySelector(':root')?.style.setProperty('--animTime', vdohTime + 's');
+    document.querySelector<HTMLElement>(':root')?.style.setProperty('--animTime', vdohTime + 's');
 
-    // console.log(getComputedStyle(document.querySelector(':root')).getPropertyValue('--animTime'));
     return () => {
       dispatch(start(false));
     };
