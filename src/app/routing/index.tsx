@@ -3,7 +3,7 @@ import { useAuth } from 'shared/hooks/use-auth';
 
 import { AuthPage, HomePage, InfoPage, ProgressPage } from 'pages/index';
 
-const Routing = () => {
+const Routing: React.FC = () => {
   const { isAuth } = useAuth();
   return isAuth ? (
     <Routes>

@@ -1,23 +1,11 @@
 import React from 'react';
-import { useAppSelector } from 'shared/hooks/redux-hooks';
-import { selectBreathDifficulty } from 'widgets/Breath/model/selectors';
-import { selectProgressState } from 'widgets/Progress/model/selectors';
+
+import { useProgressCount } from 'widgets/Progress/model/hooks/useProgressCount';
 
 import s from './ProgressBar.module.scss';
 
 export const ProgressBar: React.FC = () => {
-  const progress = useAppSelector(selectProgressState);
-  const currentDifficulty = useAppSelector(selectBreathDifficulty);
-  const count = progress[currentDifficulty];
-
-  let arr = new Array(90);
-
-  for (let i = 0; i < 90; i++) {
-    arr[i] = false;
-  }
-  for (let i = 0; i < count; i++) {
-    arr[i] = true;
-  }
+  const arr = useProgressCount();
 
   const items = arr.map((el, i) => {
     if (i < 30) return <div key={i} className={el ? s.item_active : s.item} />;
