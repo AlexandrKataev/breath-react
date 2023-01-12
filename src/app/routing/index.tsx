@@ -1,7 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { useAuth } from 'processes/Auth/hooks/use-auth';
 
-import { AuthPage, HomePage, InfoPage, ProgressPage } from 'pages/index';
+import { AuthPage, HomePage, InfoPage, ProgressPage } from 'pages';
 
 const Routing: React.FC = () => {
   const { isAuth } = useAuth();
