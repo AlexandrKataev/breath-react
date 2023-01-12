@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { FC } from 'react';
 
 import s from './Progress.module.scss';
 
@@ -7,7 +7,7 @@ import { Difficulty } from 'features/index';
 
 import { useFetchProgress } from './model/hooks/useFetchProgress';
 
-export const Progress: React.FC = () => {
+export const Progress: FC = () => {
   useFetchProgress();
 
   return (

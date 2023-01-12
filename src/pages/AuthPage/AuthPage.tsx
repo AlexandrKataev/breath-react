@@ -1,9 +1,9 @@
-import React from 'react';
+import { FC } from 'react';
 import s from './AuthPage.module.scss';
 
-import { Login } from 'features/index';
+import { Login } from 'features';
 
-export const AuthPage: React.FC = () => {
+export const AuthPage: FC = () => {
   return (
     <div className={s.body}>
       <Login />

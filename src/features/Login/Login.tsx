@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 
 import s from './Login.module.scss';
 import Button from 'shared/ui/Button/Button';
@@ -8,7 +8,7 @@ import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { setAuth } from 'processes/Auth/authSlice';
 import { useAppDispatch } from 'app/store/hooks';
 
-export const Login: React.FC = () => {
+export const Login: FC = () => {
   const dispatch = useAppDispatch();
 
   useLocalStorageAuth();

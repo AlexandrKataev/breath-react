@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 
 import s from './StartButton.module.scss';
 
@@ -17,7 +17,7 @@ import db from '../../firebase';
 import { selectAuth } from 'processes/Auth/selectors';
 import { selectProgressState } from 'widgets/Progress/model/selectors';
 
-export const StartButton: React.FC = () => {
+export const StartButton: FC = () => {
   const dispatch = useAppDispatch();
 
   const started = useAppSelector(selectBreathStarted);

@@ -1,10 +1,10 @@
-import React from 'react';
+import { FC } from 'react';
 
 import { useProgressCount } from 'widgets/Progress/model/hooks/useProgressCount';
 
 import s from './ProgressBar.module.scss';
 
-export const ProgressBar: React.FC = () => {
+export const ProgressBar: FC = () => {
   const arr = useProgressCount();
 
   const items = arr.map((el, i) => {
