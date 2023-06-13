@@ -14,7 +14,7 @@ https://breath-react.vercel.app/breath-react/home
 - Firestore Database
 - Vercel
 
-## Structure
+## Screenshots
 
 ![Изображение не найдено](./src/assets/screenshot.png 'Front-end structure')
 ![Изображение не найдено](./src/assets/screenshot2.png 'Front-end structure')
