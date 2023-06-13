@@ -16,4 +16,5 @@ https://breath-react.vercel.app/breath-react/home
 
 ## Structure
 
-![Структура не найдена](./src/assets/breath-structure.drawio.png 'Front-end structure')
+![Изображение не найдено](./src/assets/screenshot.png 'Front-end structure')
+![Изображение не найдено](./src/assets/screenshot2.png 'Front-end structure')
