@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 import 'react-circular-progressbar/dist/styles.css';
 import s from './Breath.module.scss';
 
@@ -12,7 +12,7 @@ import { useTimer } from './model/hooks/useTimer';
 import { useSetAnimSpeed } from './model/hooks/useSetAnimSpeed';
 import { useFetchProgress } from 'widgets/Progress/model/hooks/useFetchProgress';
 
-export const Breath: React.FC = () => {
+export const Breath: FC = () => {
   const started = useAppSelector(selectBreathStarted);
 
   useTimer();

@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+import { FC, useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from 'app/store/hooks';
 import { setReady } from 'widgets/Breath/model/breathSlice';
 import { selectBreathHint, selectTime } from 'widgets/Breath/model/selectors';
 import s from './Hint.module.scss';
 
-export const Hint: React.FC = () => {
+export const Hint: FC = () => {
   const dispatch = useAppDispatch();
   const hint = useAppSelector(selectBreathHint);
   const time = useAppSelector(selectTime);

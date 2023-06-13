@@ -1,17 +1,12 @@
-import React from 'react';
+import { FC } from 'react';
 import s from './Timer.module.scss';
 
 import { buildStyles, CircularProgressbarWithChildren } from 'react-circular-progressbar';
 import { useAppDispatch, useAppSelector } from 'app/store/hooks';
 import { start } from 'widgets/Breath/model/breathSlice';
-import {
-  selectBreathIsVidoh,
-  selectBreathItter,
-  selectBreathStarted,
-  selectTime,
-} from 'widgets/Breath/model/selectors';
+import { selectBreathItter, selectBreathStarted, selectTime } from 'widgets/Breath/model/selectors';
 
-export const Timer = () => {
+export const Timer: FC = () => {
   const dispatch = useAppDispatch();
   const time = useAppSelector(selectTime);
   const itter = useAppSelector(selectBreathItter);

@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 import cx from 'classnames';
 import s from './Lungs.module.scss';
 
@@ -10,7 +10,7 @@ import {
   selectBreathStarted,
 } from 'widgets/Breath/model/selectors';
 
-export const Lungs: React.FC = () => {
+export const Lungs: FC = () => {
   const started = useAppSelector(selectBreathStarted);
   const isVdoh = useAppSelector(selectBreathIsVdoh);
   const isVidoh = useAppSelector(selectBreathIsVidoh);

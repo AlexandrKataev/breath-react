@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 import s from './InfoPage.module.scss';
 
 import { ReactComponent as ProgressIcon } from 'shared/ui/icons/progress.svg';
@@ -6,9 +6,9 @@ import { ReactComponent as DayIcon } from 'shared/ui/icons/day2.svg';
 import { ReactComponent as DaysIcon } from 'shared/ui/icons/days.svg';
 import { ReactComponent as PlusIcon } from 'shared/ui/icons/plus.svg';
 import BreathIcon from 'shared/ui/icons/breath.png';
-import { Logout } from 'features/index';
+import { Logout } from 'features';
 
-export const InfoPage: React.FC = () => {
+export const InfoPage: FC = () => {
   return (
     <div className={s.body}>
       <div className={s.title}>

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { FC, useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from 'app/store/hooks';
 import { selectBreathDifficulty } from 'widgets/Breath/model/selectors';
 
@@ -9,7 +9,7 @@ import s from './Difficulty.module.scss';
 import { minusDifficulty, plusDifficulty, setTimings } from 'widgets/Breath/model/breathSlice';
 import { useDifficultyFromLocalStorage } from './hooks/useDifficultyFromLocalStorage';
 
-export const Difficulty: React.FC = () => {
+export const Difficulty: FC = () => {
   const dispatch = useAppDispatch();
   const difficulty = useAppSelector(selectBreathDifficulty);
 

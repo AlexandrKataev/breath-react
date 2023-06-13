@@ -1,8 +1,8 @@
-import React from 'react';
+import { FC } from 'react';
 
-import { Progress } from 'widgets/index';
+import { Progress } from 'widgets';
 
-export const ProgressPage: React.FC = () => {
+export const ProgressPage: FC = () => {
   return (
     <>
       <Progress />

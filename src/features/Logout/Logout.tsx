@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 import s from './Logout.module.scss';
 
 import { useAppDispatch, useAppSelector } from 'app/store/hooks';
@@ -8,7 +8,7 @@ import { selectAuth } from 'processes/Auth/selectors';
 import { ReactComponent as UserIcon } from 'shared/ui/icons/user.svg';
 import Button from 'shared/ui/Button/Button';
 
-export const Logout = () => {
+export const Logout: FC = () => {
   const dispatch = useAppDispatch();
   const userEmail = useAppSelector(selectAuth).email;
 

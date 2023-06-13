@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 import { NavLink } from 'react-router-dom';
 import s from './Header.module.scss';
 
@@ -6,7 +6,7 @@ import { useAppSelector } from 'app/store/hooks';
 import { selectAuth } from 'processes/Auth/selectors';
 import { menuItems } from './model/types';
 
-export const Header: React.FC = () => {
+export const Header: FC = () => {
   const auth = useAppSelector(selectAuth);
 
   return auth ? (
