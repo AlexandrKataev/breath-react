@@ -8,10 +8,9 @@
 
 #myContainer {
   // margin: 0 auto;
-  width: calc(60vh - 100px);
-  height: calc(60vh - 100px);
-  max-width: 90vw;
-  max-height: 90vw;
+  width: calc(60vmin - 100px);
+  height: calc(60vmin - 100px);
+
   background-image: linear-gradient(#ef7dc6 40%, #6242f5 100%);
   -webkit-mask-box-image: url(../../shared/ui/icons/breath.svg);
 }
