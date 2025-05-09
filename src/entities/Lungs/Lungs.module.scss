@@ -6,6 +6,8 @@
   max-height: 90dvw;
   position: relative;
   background-image: linear-gradient(#ef7dc6 40%, #6242f5 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
   -webkit-mask-box-image: url(../../shared/ui/icons/breath.svg);
 }
 
