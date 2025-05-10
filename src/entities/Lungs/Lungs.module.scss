@@ -1,11 +1,12 @@
 .lungs {
   display: flex;
-  width: 300px;
-  height: 300px;
+  width: 450px;
+  height: 450px;
   max-width: 90dvw;
   max-height: 90dvw;
   position: relative;
-  background-image: linear-gradient(#ef7dc6 40%, #6242f5 100%);
+  // background-image: linear-gradient(#ef7dc6 40%, #6242f5 100%);
+  background-color: #ef7dc6;
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-mask-image: url(../../shared/ui/icons/breath.svg);
@@ -14,6 +15,13 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: contain; /* или cover / 100% */
   mask-size: contain;
+  transition: all;
+  transition-duration: 1s;
+}
+
+.lungsPending {
+  background-image: none;
+  background: var(--b1);
 }
 
 .lungs2 {
@@ -21,14 +29,12 @@
   z-index: 4;
   display: block;
   bottom: -25px;
-  width: 300px;
-  max-width: 90dvw;
-  max-height: 90dvw;
-  height: 0px;
+  width: 100%;
+  height: 0;
 
   opacity: 0.6;
   background: var(--pa);
-  box-shadow: 0 0 20px 20px var(--pa);
+  box-shadow: 0 0 10px 10px var(--pa);
 
   animation-duration: var(--animTime);
   animation-timing-function: linear;
@@ -38,19 +44,19 @@
 
 @keyframes breath {
   from {
-    height: 0px;
+    height: 0;
   }
   to {
-    height: 300px;
+    height: 100%;
   }
 }
 
 @keyframes breath2 {
   from {
-    height: 300px;
+    height: 100%;
   }
   to {
-    height: 0px;
+    height: 0;
   }
 }
 
@@ -61,5 +67,5 @@
   animation: breath2 var(--animTime) linear 1 forwards;
 }
 .animZad {
-  height: 300px;
+  height: 450px;
 }

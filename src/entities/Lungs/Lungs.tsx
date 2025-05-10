@@ -17,7 +17,7 @@ export const Lungs: FC = () => {
   const isZad = useAppSelector(selectBreathIsZad);
 
   return (
-    <div className={s.lungs}>
+    <div className={cx(s.lungs, { [s.lungsPending]: !started })}>
       <div
         className={cx(
           s.lungs2,
