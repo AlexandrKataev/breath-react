@@ -1,9 +1,9 @@
 .lungs {
   display: flex;
-  width: 450px;
-  height: 450px;
-  max-width: 90dvw;
-  max-height: 90dvw;
+  // width: 450px;
+  // height: 450px;
+  width: 90dvw;
+  height: 90dvw;
   position: relative;
   // background-image: linear-gradient(#ef7dc6 40%, #6242f5 100%);
   background-color: #ef7dc6;
@@ -67,5 +67,5 @@
   animation: breath2 var(--animTime) linear 1 forwards;
 }
 .animZad {
-  height: 450px;
+  height: 100%;
 }
